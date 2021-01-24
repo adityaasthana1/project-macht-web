@@ -1151,7 +1151,7 @@ contact
 --------------------------------------------- 
 */
 #contact-us{
-  margin-top: 200px;
+  margin-top: 80px;
 }
 
 #contact-us .container-fluid {
@@ -1198,7 +1198,7 @@ contact
 
 @media (max-width: 765px) {
   .contact-form {
-    padding: 60px;
+    padding: 10px;
     margin-top: -7px;
   }
 }
