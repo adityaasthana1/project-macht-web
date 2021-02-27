@@ -2,11 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 
 ReactDOM.render(
+
   <React.StrictMode>
-    <App />
+    <HashRouter>
+      <Switch>
+        <Route exact path="/" component={App}></Route>
+      </Switch>
+    </HashRouter>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

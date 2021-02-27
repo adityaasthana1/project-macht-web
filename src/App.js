@@ -2,10 +2,10 @@ import Home from './Pages/Home/Home';
 
 function App() {
   return (
-    <div>
-    <h1> Project Match </h1>
-    <Home/>
-  </div>
-)}
+    <div className="App">
+      <Home />
+    </div>
+  )
+}
 
 export default App;
