@@ -1,7 +1,0 @@
-.Product{
-    display: flex;
-}
-
-.Product > div{
-    width: 50%;
-}
