@@ -1,7 +1,7 @@
-.sec{
+.Product{
     display: flex;
 }
 
-.sec > div{
+.Product > div{
     width: 50%;
 }

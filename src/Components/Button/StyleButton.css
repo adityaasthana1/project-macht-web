@@ -4,4 +4,6 @@
 
     margin: 15px 25px;
     cursor: pointer;
+
+    user-select: none;
 }
