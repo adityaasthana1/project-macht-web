@@ -1,5 +1,6 @@
 .Product{
     display: flex;
+    margin: 200px 0;
 }
 
 .Product > div{

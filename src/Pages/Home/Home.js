@@ -5,6 +5,7 @@ import Welcome from "../../Components/Welcome/Welcome";
 import PnD from "../../Components/PnD/PnD";
 import VnF from '../../Components/VnF/VnF';
 import Footer from "../../Components/Footer/Footer";
+import "./home.css";
 
 
 // Home page 

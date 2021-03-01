@@ -1,0 +1,11 @@
+.App{
+    background-color: black;
+    display: flex;
+    color: #aaa;
+    
+    justify-content: center;
+}
+
+h3{
+    color: white    ;
+}

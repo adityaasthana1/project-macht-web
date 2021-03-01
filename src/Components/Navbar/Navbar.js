@@ -38,17 +38,16 @@ let Header = () => {
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="#">Home</a><span class="hover"></span></li>
-            <li><a href="#">About</a><span class="hover"></span></li>
-            <li><a href="#">Product</a><span class="hover"></span></li>
-            <li><a href="#">Team</a><span class="hover"></span></li>
-            <li><a href="#">Contact Us</a><span class="hover"></span></li>
-            <NavItem></NavItem>
+            <NavItem data={"Home"}></NavItem>
+            <NavItem data={"About"}></NavItem>
+            <NavItem data={"Product"}></NavItem>
+            <NavItem data={"Team"}></NavItem>
+            <NavItem data={"Contact Us"}></NavItem>
           </ul>
         </div>
       </div>
     </nav>
-  </div>
+  </div >
 }
 
 // Javascript code to  convert

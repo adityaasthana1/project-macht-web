@@ -1,0 +1,11 @@
+.hover.ini{
+    width: 100%;
+    opacity: 1;
+    transition: 0.5s all;
+}
+
+.hover{
+    width: 0%;
+    opacity: 0;
+    transition: 0.5s all;
+}

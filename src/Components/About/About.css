@@ -1,5 +1,6 @@
 .sec{
     display: flex;
+    margin: 200px 0;
 }
 
 .sec > div{
