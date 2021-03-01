@@ -6,7 +6,7 @@ import PnD from "../../Components/PnD/PnD";
 import VnF from '../../Components/VnF/VnF';
 import Footer from "../../Components/Footer/Footer";
 import "./home.css";
-
+// import mButton from "@material-ui/core/Button";
 
 // Home page 
 
@@ -18,6 +18,7 @@ const Home = () => {
     <PnD></PnD>
     <VnF></VnF>
     <Footer></Footer>
+
   </div>
 };
 

@@ -3,6 +3,8 @@ import React from "react";
 import "./Navbar.scss";
 import NavItem from "../../Components/NavItem/NavItem";
 
+import Menu from "@material-ui/core/Menu";
+import MenutItem from "@material-ui/core/MenuItem";
 
 //Header Component
 let Header = () => {
@@ -43,6 +45,9 @@ let Header = () => {
             <NavItem data={"Product"}></NavItem>
             <NavItem data={"Team"}></NavItem>
             <NavItem data={"Contact Us"}></NavItem>
+            <Menu>
+              <MenutItem>Product</MenutItem>
+            </Menu>
           </ul>
         </div>
       </div>

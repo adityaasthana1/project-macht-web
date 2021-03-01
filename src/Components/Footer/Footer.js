@@ -1,20 +1,19 @@
 import React from "react";
 import "./Footer.css";
+import TextField from "@material-ui/core/TextField";
 
 let Footer = () => {
+    const styles = {
+        textfield: {
+            fontSize: 500,
+        }
+    }
+
     return <div className="Footer">
         <div className="Form">
             <form>
-                <label>
-                    <input type="text" name="name"></input>
-                </label>
-                <label>
-                    <input type="text" name="Email"></input>
-                </label>
-                <br></br>
-                <label>
-                    <input type="text" name="Message"></input>
-                </label>
+                <TextField id="standard-basic" inputStyled={styles.textfield} label="Standard" />
+                <TextField id="Filled" label="name"></TextField>
             </form>
         </div>
         <div>
