@@ -1,10 +1,10 @@
 import React from 'react';
-import About from '../../components/About/About';
-import Navbar from "../../components/Navbar/Navbar";
-import Welcome from "../../components/Welcome/Welcome";
-import PnD from "../../components/PnD/PnD";
-import VnF from '../../components/VnF/VnF';
-import Footer from "../../components/Footer/Footer";
+import About from '../../Components/About/About';
+import Navbar from "../../Components/Navbar/Navbar";
+import Welcome from "../../Components/Welcome/Welcome";
+import PnD from "../../Components/PnD/PnD";
+import VnF from '../../Components/VnF/VnF';
+import Footer from "../../Components/Footer/Footer";
 
 
 // Home page 
