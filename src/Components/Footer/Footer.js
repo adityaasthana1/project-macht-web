@@ -2,18 +2,46 @@ import React from "react";
 import "./Footer.css";
 import TextField from "@material-ui/core/TextField";
 
-let Footer = () => {
-    const styles = {
-        textfield: {
-            fontSize: 500,
-        }
-    }
+
+// import classes from "*.module.css";
+
+
+let Footer = (props) => {
 
     return <div className="Footer">
         <div className="Form">
             <form>
-                <TextField id="standard-basic" inputStyled={styles.textfield} label="Standard" />
-                <TextField id="Filled" label="name"></TextField>
+                <div>
+                    <TextField
+                        label="name"
+                        variant="filled"
+                        size="large"
+                        className="textField"
+                        inputProps={{ style: { fontSize: 15 } }} // font size of input text
+                        InputLabelProps={{ style: { fontSize: 15 } }}
+                    ></TextField>
+                    <TextField
+                        label="Email"
+                        variant="filled"
+                        size="large"
+                        className="textField"
+                        inputProps={{ style: { fontSize: 15 } }} // font size of input text
+                        InputLabelProps={{ style: { fontSize: 15 } }}
+                    ></TextField>
+                </div>
+                <div className="textField">
+                    <TextField
+                        label="Email"
+                        variant="filled"
+                        size="large"
+                        className="textArea"
+                        inputProps={{ style: { fontSize: 15, height: 100 } }}  // font size of input text
+                        InputLabelProps={{ style: { fontSize: 15 } }}
+                        multiline
+
+                    ></TextField>
+
+                </div>
             </form>
         </div>
         <div>
@@ -21,7 +49,7 @@ let Footer = () => {
         </div>
 
 
-    </div>
+    </div >
 }
 
 export default Footer;

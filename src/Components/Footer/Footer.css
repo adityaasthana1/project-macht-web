@@ -1,7 +1,39 @@
 .Footer{
+    background-color: #111;
+
+        /* position: absolute;
+        left: 0; */
+
+    width: 100%;
+
+
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 250px;
+}
+
+.Form{
+    margin-top: 25px;
+}
+
+form{
+    width: 100%;
 }
 
 .Footer > div{
-    width: 50%
+
+    width: 30%;
+}
+
+.textField{
+    margin-left: 15px !important;
+
+}
+
+.textArea{
+    width: 400px;
+    margin-top: 15px;
+    
 }

@@ -11,14 +11,18 @@ import "./home.css";
 // Home page 
 
 const Home = () => {
-  return <div className="Home">
-    <Navbar></Navbar>
-    <Welcome></Welcome>
-    <About></About>
-    <PnD></PnD>
-    <VnF></VnF>
-    <Footer></Footer>
 
+  return <div className="conHome">
+    <div className="Home">
+      <Navbar></Navbar>
+      <Welcome></Welcome>
+      <About></About>
+      <PnD></PnD>
+      <VnF></VnF>
+
+
+    </div>
+    <Footer></Footer>
   </div>
 };
 

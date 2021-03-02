@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../../Components/Button/Button";
 import "./About.css";
 
+
 let About = () => {
     return <div className="About">
         {/* first Section */}
