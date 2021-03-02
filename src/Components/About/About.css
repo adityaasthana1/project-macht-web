@@ -1,8 +1,26 @@
 .sec{
     display: flex;
-    margin: 200px 0;
+    margin: 100px 0;
 }
 
 .sec > div{
     width: 50%;
+    margin-left: 15px;
+}
+
+
+
+.About{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainImage{
+    max-width: 100%;
+}
+
+.image{
+    width: 100%;
 }

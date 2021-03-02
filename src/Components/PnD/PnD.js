@@ -1,6 +1,7 @@
 import React from "react";
 import Products from "../../Data/Products";
 import "./PnD.css";
+import prodImg from "../../Img/right-image.png"
 
 let ProductPanels = () => {
     // Products.forEach((e) => { console.log(e) });
@@ -30,7 +31,7 @@ let PnD = () => {
         </div>
 
         <div>
-            <img src="#"></img>
+            <img src={prodImg} className="image"></img>
         </div>
     </div>
 }

@@ -1,13 +1,12 @@
 import React from "react";
 import "./Welcome.css";
+import logo from "../../Img/macht-logo.png"
 
 
 let Welcome = () => {
     return <div className="Welcome">
-        <h1 className="TextMain">Project Macht</h1>
-        <div className="Back"></div>
         {/* Replace with a background image */}
-        <img src='#' alt="Hero"></img>
+        <img src={logo} alt="Hero" className="mainImage"></img>
     </div>
 }
 

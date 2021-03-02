@@ -1,14 +1,17 @@
 import React from "react";
 import Button from "../../Components/Button/Button";
 import "./About.css";
+import about from "../../Img/AboutA.jpg"
+import neural from "../../Img/neural.png"
 
 
 let About = () => {
+
     return <div className="About">
         {/* first Section */}
         <div className="sec">
             <div>
-                <h3>Who are we?</h3>
+                <h1>Who are we?</h1>
                 <p>An initiative to build a highly customizable AI-based smart assistant
                 and along with it, a suite of interconnected devices that provide ease
                 in our day to day lives for a fraction of the cost of their commercial
@@ -16,16 +19,16 @@ let About = () => {
                 <Button text="FIND OUT MORE"></Button>
             </div>
             <div>
-                <img src="#"></img>
+                <img src={neural} className="image"></img>
             </div>
         </div>
 
-        <div className="sec">
+        <div className="sec dark">
             <div>
-                <img src="#"></img>
+                <img src={about} className="image"></img>
             </div>
             <div>
-                <h3>We bring ease to your daily life</h3>
+                <h1>We bring ease to your daily life</h1>
                 <p>Our aim here at Project Macht is to give access to revolutionary technology to people
                 who cannot afford it. With this aim driving us, we have created a complete solution that
                 includes a smart assistant that can do whatever a commercial AI-based assistant do and much more;

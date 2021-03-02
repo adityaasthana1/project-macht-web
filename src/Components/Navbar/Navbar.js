@@ -5,9 +5,22 @@ import NavItem from "../../Components/NavItem/NavItem";
 
 import Menu from "@material-ui/core/Menu";
 import MenutItem from "@material-ui/core/MenuItem";
+import { Button, Select, MenuItem } from "@material-ui/core";
 
 //Header Component
 let Header = () => {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  }
+
+  const openMenu = (event) => {
+    console.log("anchor")
+    setAnchorEl(event.currentTarget);
+  }
+
+
   return <div >
     {/* <h1 className="Title">Project Macht</h1>
         <div className="Navigation">
@@ -42,11 +55,22 @@ let Header = () => {
           <ul class="nav navbar-nav">
             <NavItem data={"Home"}></NavItem>
             <NavItem data={"About"}></NavItem>
-            <NavItem data={"Product"}></NavItem>
+            <NavItem data={"Product"} onClick={openMenu}></NavItem>
             <NavItem data={"Team"}></NavItem>
             <NavItem data={"Contact Us"}></NavItem>
-            <Menu>
-              <MenutItem>Product</MenutItem>
+
+
+            <Menu
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+              variant="menu"
+            >
+              <MenutItem onClick={handleClose}>ProductC</MenutItem>
+              <MenutItem onClick={handleClose}>ProductA</MenutItem>
+              <MenutItem onClick={handleClose}>ProductB</MenutItem>
+
             </Menu>
           </ul>
         </div>

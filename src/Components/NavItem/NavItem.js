@@ -14,7 +14,7 @@ let DeInitialte = (set) => {
 let NavItem = (props) => {
     let [cssClass, setClass] = useState("hover");
 
-    return <li>
+    return <li onClick={props.onClick}>
         <a href="#" className="Info" onMouseEnter={() => { Initialte(setClass) }} onMouseLeave={() => { DeInitialte(setClass) }}>{props.data}</a>
         <span class={cssClass}></span>
     </li>
