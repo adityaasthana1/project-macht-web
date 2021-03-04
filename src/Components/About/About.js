@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../Components/Button/Button";
+import Button from "../Button/Button";
 import "./About.css";
 import about from "../../Img/AboutA.jpg"
 import neural from "../../Img/neural.png"

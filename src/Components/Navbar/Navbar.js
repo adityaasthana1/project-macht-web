@@ -1,11 +1,12 @@
 //Header Component
 import React from "react";
 import "./Navbar.scss";
-import NavItem from "../../Components/NavItem/NavItem";
+import NavItem from "../NavItem/NavItem";
 
 import Menu from "@material-ui/core/Menu";
 import MenutItem from "@material-ui/core/MenuItem";
 import { Button, Select, MenuItem } from "@material-ui/core";
+import { Dropdown } from 'semantic-ui-react';
 
 //Header Component
 let Header = () => {
@@ -19,6 +20,11 @@ let Header = () => {
     console.log("anchor")
     setAnchorEl(event.currentTarget);
   }
+
+  const options = [
+    { key: 1, text: 'Choice 1', value: 1 },
+    { key: 2, text: 'Choice 2', value: 2 },
+  ]
 
 
   return <div >
@@ -50,12 +56,13 @@ let Header = () => {
           </button>
           <a class="navbar-brand" href="#">Project Macht</a>
         </div>
-
+        
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <NavItem data={"Home"}></NavItem>
             <NavItem data={"About"}></NavItem>
             <NavItem data={"Product"} onClick={openMenu}></NavItem>
+            <Dropdown text='Product' id="drp" options={options} error />
             <NavItem data={"Team"}></NavItem>
             <NavItem data={"Contact Us"}></NavItem>
 
