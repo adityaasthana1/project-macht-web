@@ -7,10 +7,12 @@ import Menu from "@material-ui/core/Menu";
 import MenutItem from "@material-ui/core/MenuItem";
 import { Button, Select, MenuItem } from "@material-ui/core";
 import { Dropdown } from 'semantic-ui-react';
+import { useHistory } from "react-router";
 
 //Header Component
 let Header = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  let history = useHistory();
 
   const handleClose = () => {
     setAnchorEl(null);
@@ -56,14 +58,14 @@ let Header = () => {
           </button>
           <a class="navbar-brand" href="#">Project Macht</a>
         </div>
-        
+
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <NavItem data={"Home"}></NavItem>
+            <NavItem data={"Home"} onClick={() => { history.push("./") }}></NavItem>
             <NavItem data={"About"}></NavItem>
             <NavItem data={"Product"} onClick={openMenu}></NavItem>
-            <Dropdown text='Product' id="drp" options={options} error />
-            <NavItem data={"Team"}></NavItem>
+            {/* <Dropdown text='Product' id="drp" options={options} error /> */}
+            <NavItem data={"Team"} onClick={() => { history.push("./teams") }}></NavItem>
             <NavItem data={"Contact Us"}></NavItem>
 
 

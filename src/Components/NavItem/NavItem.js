@@ -15,7 +15,7 @@ let NavItem = (props) => {
     let [cssClass, setClass] = useState("hover");
 
     return <li onClick={props.onClick}>
-        <a href="#" className="Info" onMouseEnter={() => { Initialte(setClass) }} onMouseLeave={() => { DeInitialte(setClass) }}>{props.data}</a>
+        <div href="#" className="Info" onMouseEnter={() => { Initialte(setClass) }} onMouseLeave={() => { DeInitialte(setClass) }}>{props.data}</div>
         <span class={cssClass}></span>
     </li>
 }

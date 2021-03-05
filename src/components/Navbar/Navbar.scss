@@ -38,7 +38,7 @@
   
   .nav{
     margin-bottom:0px;
-    a{
+    div{
       font:500 12px sans-serif ;
       letter-spacing:2px;
       padding:16px !important;
@@ -47,7 +47,7 @@
       position:relative;
       z-index:1000;
     }
-    a:hover{
+    div:hover{
       color:#FFF !important;
     }
     li{
@@ -95,7 +95,7 @@
   @media (max-width: 767px) {
   .nav{
     padding-bottom:20px;
-    a{
+    div{
       padding:12px !important;
     }
   }
