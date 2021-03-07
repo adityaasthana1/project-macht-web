@@ -4,6 +4,7 @@ import Profile from "../../Components/Profile/Profile"
 import "./profilepage.css"
 // import logo from "../../Img/temp.jpg"
 import profileData from "../../Data/Profiles"
+import fire from "../../Scripts/Fire"
 
 let generateCards = (users) => {
 
@@ -20,6 +21,8 @@ let generateCards = (users) => {
 
 let Teams = () => {
     // generateCards(profileData);
+
+    console.log(fire.getUser());
     return <div className="teams-page">
         <Navbar></Navbar>
         <div className="team-header">Meet The Team</div>

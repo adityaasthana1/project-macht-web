@@ -5,6 +5,7 @@ import App from './App';
 import { HashRouter, Switch, Route } from "react-router-dom";
 import Teams from "./Pages/Teams/Teams"
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import fire from "./Scripts/Fire"
 
 const theme = createMuiTheme({
   palette: {
@@ -12,6 +13,7 @@ const theme = createMuiTheme({
   }
 });
 
+fire.init();
 
 
 ReactDOM.render(
