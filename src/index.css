@@ -1,11 +1,24 @@
 .App{
     background-color: black;
     display: flex;
-    color: #aaa;
+    color: #666;
     
     justify-content: center;
 }
 
 h3{
     color: white    ;
+}
+
+
+.line{
+    width: 80%;
+    align-self: center;
+    height: 1px;
+    margin: 20px 0;
+    background-color: #555;
+}
+
+body{
+    background-color: black;
 }
