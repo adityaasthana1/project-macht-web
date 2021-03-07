@@ -2,15 +2,17 @@ import React from "react";
 import Navbar from "../../Components/Navbar/Navbar"
 import Profile from "../../Components/Profile/Profile"
 import "./profilepage.css"
-import logo from "../../Img/temp.jpg"
+// import logo from "../../Img/temp.jpg"
 import profileData from "../../Data/Profiles"
 
 let generateCards = (users) => {
 
     let cardsRow = [];
+    let counter = 0;
 
     for (let data in users) {
-        cardsRow.push(<Profile name={users[data].name} desc={users[data].desc} ></Profile>)
+        cardsRow.push(<Profile name={users[data].name} desc={users[data].desc} key={counter}></Profile>);
+        counter++;
     }
 
     return cardsRow;

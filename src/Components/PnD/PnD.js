@@ -31,7 +31,7 @@ let PnD = () => {
         </div>
 
         <div>
-            <img src={prodImg} className="image"></img>
+            <img src={prodImg} className="image" alt="product and design"></img>
         </div>
     </div>
 }

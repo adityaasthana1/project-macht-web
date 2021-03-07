@@ -13,7 +13,9 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 let fire = () => {
-
+    let getUsers = async () => {
+        // let userData = await Firebase.firestore
+    }
 }
 
 export default fire;

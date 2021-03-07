@@ -19,13 +19,13 @@ let About = () => {
                 <Button text="FIND OUT MORE"></Button>
             </div>
             <div>
-                <img src={neural} className="image"></img>
+                <img src={neural} className="image" alt="neural"></img>
             </div>
         </div>
 
         <div className="sec dark">
             <div>
-                <img src={about} className="image"></img>
+                <img src={about} className="image" alt="about"></img>
             </div>
             <div>
                 <h1>We bring ease to your daily life</h1>

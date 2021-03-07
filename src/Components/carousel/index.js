@@ -35,8 +35,8 @@ const content = [
 ];
 
 const Carousel = () => (
-  <div> 
-    <Slider className="slider-wrapper" autoplay ={3000} >
+  <div>
+    <Slider className="slider-wrapper" autoplay={3000} >
       {content.map((item, index) => (
         <div
           key={index}

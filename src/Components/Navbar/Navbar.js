@@ -5,8 +5,6 @@ import NavItem from "../NavItem/NavItem";
 
 import Menu from "@material-ui/core/Menu";
 import MenutItem from "@material-ui/core/MenuItem";
-import { Button, Select, MenuItem } from "@material-ui/core";
-import { Dropdown } from 'semantic-ui-react';
 import { useHistory } from "react-router";
 
 //Header Component
