@@ -10,8 +10,7 @@ let generateCards = (users) => {
     let cardsRow = [];
 
     for (let data in users) {
-
-        cardsRow.push(<Profile name={users[data].name} desc={users[data].desc}></Profile>)
+        cardsRow.push(<Profile name={users[data].name} desc={users[data].desc} ></Profile>)
     }
 
     return cardsRow;
@@ -21,6 +20,7 @@ let Teams = () => {
     // generateCards(profileData);
     return <div className="teams-page">
         <Navbar></Navbar>
+        <div className="team-header">Meet The Team</div>
         <div className="profile-page">
             <div className="h-profile">
                 {generateCards(profileData)}

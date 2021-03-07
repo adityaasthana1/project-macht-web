@@ -4,16 +4,30 @@ import './index.css';
 import App from './App';
 import { HashRouter, Switch, Route } from "react-router-dom";
 import Teams from "./Pages/Teams/Teams"
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    type: "dark",
+  }
+});
+
+
 
 ReactDOM.render(
 
   <React.StrictMode>
-    <HashRouter>
-      <Switch>
-        <Route exact path="/" component={App}></Route>
-        <Route exact path="/teams" component={Teams}></Route>
-      </Switch>
-    </HashRouter>
+    <ThemeProvider theme={theme}>
+
+      <HashRouter>
+        <Switch>
+          <Route exact path="/" component={App}></Route>
+          <Route exact path="/teams" component={Teams}></Route>
+        </Switch>
+
+      </HashRouter>
+    </ThemeProvider>
+
 
   </React.StrictMode>,
   document.getElementById('root')

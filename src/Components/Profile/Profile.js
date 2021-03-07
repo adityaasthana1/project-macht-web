@@ -7,7 +7,7 @@ let Profile = (props) => {
         <div className="line"></div>
         <div>
             <h2 className="profile-name">{props.name}</h2>
-            <p className="profile-desc">{props.info}</p>
+            <p className="profile-desc">{props.desc}</p>
         </div>
     </div>
 }
