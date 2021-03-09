@@ -6,6 +6,7 @@ import { HashRouter, Switch, Route } from "react-router-dom";
 import Teams from "./Pages/Teams/Teams"
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import fire from "./Scripts/Fire"
+import AddProfile from './Pages/AddProfile/AddProfile';
 
 const theme = createMuiTheme({
   palette: {
@@ -25,6 +26,7 @@ ReactDOM.render(
         <Switch>
           <Route exact path="/" component={App}></Route>
           <Route exact path="/teams" component={Teams}></Route>
+          <Route exact path="/addprofile" component={AddProfile}></Route>
         </Switch>
 
       </HashRouter>

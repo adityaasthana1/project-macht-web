@@ -1,5 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
+import "firebase/storage";
 
 
 let fire = (() => {
@@ -22,16 +23,35 @@ let fire = (() => {
         db = firebase.firestore();
     }
 
-    let getUser = async () => {
+    let getUser = () => {
         let users = db.collection("Web").doc("Web");
         let data;
-        await users.get().then((doc) => {
+        users.get().then((doc) => {
             data = doc.data();
         })
 
         return (data);
     }
 
-    return { init, getUser };
+    let upload = (data) => {
+        db.collection("Web").doc("Web").set(data)
+            .then(() => {
+                console.log("doc uploaded");
+            }).catch((err) => {
+                console.error(err);
+            })
+    }
+
+
+    let uploadImage = async (data) => {
+        let storage = firebase.storage();
+        let storageRef = storage.ref();
+
+        let imageRef = storageRef.child("images");
+
+    }
+
+
+    return { init, getUser, upload, uploadImage };
 })();
 export default fire;
