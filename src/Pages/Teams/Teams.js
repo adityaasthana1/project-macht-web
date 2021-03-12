@@ -9,7 +9,7 @@ import { CircularProgress } from "@material-ui/core";
 import { Loader } from "semantic-ui-react";
 
 let generateCards = (users) => {
-    console.log("user", users);
+    // console.log("user", users);
     if (!users) {
         return <div class="lds-ripple"><div></div><div></div></div>
     }
@@ -19,7 +19,7 @@ let generateCards = (users) => {
 
 
     for (let data in users) {
-        cardsRow.push(<Profile name={users[data].name} desc={users[data].desc} key={counter}></Profile>);
+        cardsRow.push(<Profile name={users[data].name} desc={users[data].desc} img={users[data].img} key={counter}></Profile>);
         counter++;
     }
 

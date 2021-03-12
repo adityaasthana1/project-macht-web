@@ -32,7 +32,7 @@ let fire = (() => {
             // console.log(doc.data());
             data = doc.data();
             // console.log(data, "inner");
-            return data;
+
         })
         console.log(data, "outer");
         return data;
@@ -48,12 +48,14 @@ let fire = (() => {
     }
 
 
-    let uploadImage = async (data) => {
+    let uploadImage = async (data, name) => {
         let storage = firebase.storage();
-        let storageRef = storage.ref();
+        let storageRef = storage.ref("images");
+        let fileRef = storageRef.child(name);
 
-        let imageRef = storageRef.child("images");
-
+        await fileRef.put(data);
+        let url = await fileRef.getDownloadURL();
+        return url;
     }
 
 

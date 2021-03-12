@@ -18,15 +18,17 @@ let AddProfile = () => {
     }
 
     let descImage = (e) => {
-        setImage(e.target.value);
+        console.log(e.target.files[0]);
+        setImage(e.target.files[0]);
     }
 
     let submitData = () => {
-        fire.getUser().then((e) => {
-            console.log(e);
+        fire.getUser().then(async (e) => {
+            console.log("submit data", e);
             e[name] = {
                 name: name,
-                desc: desc
+                desc: desc,
+                img: await fire.uploadImage(image, name)
             };
 
             fire.upload(e);
