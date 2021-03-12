@@ -30,10 +30,8 @@ let Teams = () => {
     // generateCards(profileData);
     let [user, setUser] = useState();
 
-    useEffect(() => {
-        (async () => {
-            setUser(await fire.getUser());
-        })()
+    useEffect(async () => {
+        await setUser(fire.getUser());
     }, [])
 
     return <div className="teams-page">

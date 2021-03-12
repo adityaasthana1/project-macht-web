@@ -23,14 +23,19 @@ let fire = (() => {
         db = firebase.firestore();
     }
 
-    let getUser = () => {
+    let getUser = async () => {
+        // console.log("getUser");
+        // console.log("ran");
         let users = db.collection("Web").doc("Web");
         let data;
-        users.get().then((doc) => {
+        await users.get().then((doc) => {
+            // console.log(doc.data());
             data = doc.data();
+            // console.log(data, "inner");
+            return data;
         })
-
-        return (data);
+        console.log(data, "outer");
+        return data;
     }
 
     let upload = (data) => {
