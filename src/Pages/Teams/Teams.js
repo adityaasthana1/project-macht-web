@@ -31,7 +31,7 @@ let Teams = () => {
     let [user, setUser] = useState();
 
     useEffect(async () => {
-        await setUser(fire.getUser());
+        setUser(await fire.getUser());
     }, [])
 
     return <div className="teams-page">
