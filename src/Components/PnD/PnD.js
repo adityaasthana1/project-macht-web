@@ -22,7 +22,7 @@ let ProductPanels = () => {
 }
 
 let PnD = () => {
-    console.log(ProductPanels());
+
     return <div className="Product">
         <div>
             <h1>Our upcoming product line-up</h1>

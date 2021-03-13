@@ -7,6 +7,7 @@ import Teams from "./Pages/Teams/Teams"
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import fire from "./Scripts/Fire"
 import AddProfile from './Pages/AddProfile/AddProfile';
+import Productpage from "./Pages/ProductPage/Productpage";
 
 const theme = createMuiTheme({
   palette: {
@@ -27,6 +28,7 @@ ReactDOM.render(
           <Route exact path="/" component={App}></Route>
           <Route exact path="/teams" component={Teams}></Route>
           <Route exact path="/addprofile" component={AddProfile}></Route>
+          <Route exact path="/product/:prod" component={Productpage}></Route>
         </Switch>
 
       </HashRouter>

@@ -6,6 +6,7 @@ import NavItem from "../NavItem/NavItem";
 import Menu from "@material-ui/core/Menu";
 import MenutItem from "@material-ui/core/MenuItem";
 import { useHistory } from "react-router";
+import Productpage from "../../Pages/ProductPage/Productpage";
 
 //Header Component
 let Header = () => {
@@ -14,6 +15,7 @@ let Header = () => {
 
   const handleClose = () => {
     setAnchorEl(null);
+    history.push("./product/amanda");
   }
 
   const openMenu = (event) => {
@@ -74,9 +76,9 @@ let Header = () => {
               onClose={handleClose}
               variant="menu"
             >
-              <MenutItem onClick={handleClose}>ProductC</MenutItem>
-              <MenutItem onClick={handleClose}>ProductA</MenutItem>
-              <MenutItem onClick={handleClose}>ProductB</MenutItem>
+              <MenutItem onClick={() => { handleClose() }}>ProductC</MenutItem>
+              <MenutItem onClick={() => { handleClose() }}>ProductA</MenutItem>
+              <MenutItem onClick={() => { handleClose() }}>ProductB</MenutItem>
 
             </Menu>
           </ul>
