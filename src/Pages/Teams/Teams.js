@@ -6,12 +6,13 @@ import "./profilepage.css"
 import profileData from "../../Data/Profiles"
 import fire from "../../Scripts/Fire"
 import { CircularProgress } from "@material-ui/core";
-import { Loader } from "semantic-ui-react";
+import Loader from "../../Components/Loader/Loader";
+
 
 let generateCards = (users) => {
     // console.log("user", users);
     if (!users) {
-        return <div class="lds-ripple"><div></div><div></div></div>
+        return <Loader></Loader>
     }
 
     let cardsRow = [];

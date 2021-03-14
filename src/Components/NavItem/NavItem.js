@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./NavItem.css";
 
 let Initialte = (set) => {
-    console.log("Initiate");
     set("hover ini");
 }
 

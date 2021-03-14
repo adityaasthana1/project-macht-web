@@ -15,7 +15,7 @@ let Header = () => {
 
   const handleClose = () => {
     setAnchorEl(null);
-    history.push("./product/amanda");
+    history.push("./product-Amanda");
   }
 
   const openMenu = (event) => {

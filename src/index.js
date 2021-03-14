@@ -28,7 +28,7 @@ ReactDOM.render(
           <Route exact path="/" component={App}></Route>
           <Route exact path="/teams" component={Teams}></Route>
           <Route exact path="/addprofile" component={AddProfile}></Route>
-          <Route exact path="/product/:prod" component={Productpage}></Route>
+          <Route exact path="/product-:prod" component={Productpage}></Route>
         </Switch>
 
       </HashRouter>

@@ -59,6 +59,16 @@ let fire = (() => {
     }
 
 
-    return { init, getUser, upload, uploadImage };
+    let fetchProduct = async (product) => {
+        let data;
+        let prod = db.collection("Product").doc(product);
+        await prod.get().then((doc) => {
+            data = doc.data();
+        })
+        return data;
+    }
+
+
+    return { init, getUser, upload, uploadImage, fetchProduct };
 })();
 export default fire;
