@@ -17,7 +17,26 @@ let Productpage = (props) => {
         }
         else {
             console.log(product);
-            return <div> {product.Name}</ div>
+            return <div className="Prodpage">
+                <div className="ProdCont">
+                    <h1>{product.Name}</h1>
+
+                    <div className="Prodline"></div>
+
+                    <div className="ProdInfo">
+                        <div>
+                            <img href="#"></img>
+                        </div>
+                        <div></div>
+                    </div>
+
+                    <div className="Prodline"></div>
+
+                    <div className="ProdDesc">
+                        {product.Data}
+                    </div>
+                </div>
+            </ div>
         }
     }
 
