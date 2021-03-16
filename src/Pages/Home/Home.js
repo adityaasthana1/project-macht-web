@@ -8,6 +8,8 @@ import VnF from '../../Components/VnF/VnF';
 import "./home.css";
 import Carousel from '../../Components/carousel/index';
 import FooterPage from '../../Components/Footer/Footer2';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 // import Car from '../../Components/Slider';
 
 // import mButton from "@material-ui/core/Button";
@@ -25,7 +27,9 @@ const Home = () => {
 
       <PnD></PnD>
       <VnF></VnF>
-
+      <ScrollAnimation animateIn="fadeIn">
+        Some Text
+      </ScrollAnimation>
       <Carousel />
     </div>
 

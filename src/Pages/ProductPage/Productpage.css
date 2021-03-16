@@ -12,6 +12,7 @@
     width: 100%;
     margin-top: 56px;
 
+
     display: flex;
     flex-direction: column;
 
@@ -29,6 +30,7 @@
     border-radius: 15px;
 
     padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .ProdCont > h1{
@@ -48,10 +50,28 @@
 
 
 .ProdDesc{
-    margin: 0px 45px
+    margin: 15px 45px
 }
 
 
 .ProdInfo{
-    
+    margin: 0px 45px;
+    display: flex;
+}
+
+.ProdInfo > div{
+    width: 50%;
+    height: 300px;
+}
+
+.ProdImg{
+    width: 350px;
+}
+
+.ProdHolder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 10px;
 }

@@ -9,6 +9,7 @@ import fire from "./Scripts/Fire"
 import AddProfile from './Pages/AddProfile/AddProfile';
 import Productpage from "./Pages/ProductPage/Productpage";
 
+
 const theme = createMuiTheme({
   palette: {
     type: "dark",

@@ -7,15 +7,36 @@ import Menu from "@material-ui/core/Menu";
 import MenutItem from "@material-ui/core/MenuItem";
 import { useHistory } from "react-router";
 import Productpage from "../../Pages/ProductPage/Productpage";
+import { propTypes } from "react-bootstrap/esm/Image";
 
 //Header Component
-let Header = () => {
+let Header = (props) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   let history = useHistory();
 
-  const handleClose = () => {
+  let upd = (val) => {
+    if (props.setUpd != undefined) {
+      console.log(val);
+      props.setUpd(val);
+    }
+  }
+
+  const handleClose = (prod) => {
     setAnchorEl(null);
-    history.push("./product-Amanda");
+
+    if (prod === 0) {
+      history.push("./product-Amanda");
+      console.log(props.setUpd);
+      upd(prod);
+    }
+    else if (prod === 1) {
+      history.push("./product-Wally");
+      upd(prod);
+    }
+    else if (prod === 2) {
+      history.push("./product-CompVis");
+      upd(prod);
+    }
   }
 
   const openMenu = (event) => {
@@ -76,9 +97,9 @@ let Header = () => {
               onClose={handleClose}
               variant="menu"
             >
-              <MenutItem onClick={() => { handleClose() }}>ProductC</MenutItem>
-              <MenutItem onClick={() => { handleClose() }}>ProductA</MenutItem>
-              <MenutItem onClick={() => { handleClose() }}>ProductB</MenutItem>
+              <MenutItem onClick={() => { handleClose(0) }}>Amanda</MenutItem>
+              <MenutItem onClick={() => { handleClose(1) }}>Wally</MenutItem>
+              <MenutItem onClick={() => { handleClose(2) }}>Computer Vision</MenutItem>
 
             </Menu>
           </ul>

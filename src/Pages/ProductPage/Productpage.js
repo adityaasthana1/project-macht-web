@@ -8,6 +8,7 @@ import "./Productpage.css";
 let Productpage = (props) => {
     const { prod } = useParams();
     let [product, setProduct] = useState(null);
+    let [upd, setUpd] = useState(-1);
 
     let renderProd = () => {
         if (product == null) {
@@ -16,7 +17,7 @@ let Productpage = (props) => {
             </div>
         }
         else {
-            console.log(product);
+
             return <div className="Prodpage">
                 <div className="ProdCont">
                     <h1>{product.Name}</h1>
@@ -24,13 +25,13 @@ let Productpage = (props) => {
                     <div className="Prodline"></div>
 
                     <div className="ProdInfo">
-                        <div>
-                            <img href="#"></img>
+                        <div className="ProdHolder">
+                            <img className="ProdImg" src={product.img} alt={product.Name}></img>
                         </div>
-                        <div></div>
+                        <div className="ProdMain">{product.main}</div>
                     </div>
 
-                    <div className="Prodline"></div>
+
 
                     <div className="ProdDesc">
                         {product.Data}
@@ -42,12 +43,13 @@ let Productpage = (props) => {
 
 
     useEffect(async () => {
+
         setProduct(await fire.fetchProduct(prod));
-    }, []);
+    }, [upd]);
 
-
+    console.log("ProdPage", upd);
     return <div>
-        <Navbar></Navbar>
+        <Navbar setUpd={setUpd}></Navbar>
         {renderProd()}
     </div>
 
