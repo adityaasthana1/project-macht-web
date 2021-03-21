@@ -4,6 +4,8 @@ import "react-animated-slider/build/horizontal.css";
 import "./slider-animations.css";
 import "./styles.css";
 
+
+
 const content = [
   {
     title: "Vulputate Mollis Ultricies Fermentum Parturient",
@@ -36,6 +38,7 @@ const content = [
 
 const Carousel = () => (
   <div>
+
     <Slider className="slider-wrapper" autoplay={3000} >
       {content.map((item, index) => (
         <div
@@ -57,6 +60,7 @@ const Carousel = () => (
         </div>
       ))}
     </Slider>
+
   </div>
 );
 

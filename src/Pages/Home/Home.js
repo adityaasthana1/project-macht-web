@@ -8,7 +8,9 @@ import VnF from '../../Components/VnF/VnF';
 import "./home.css";
 import Carousel from '../../Components/carousel/index';
 import FooterPage from '../../Components/Footer/Footer2';
-import ScrollAnimation from 'react-animate-on-scroll';
+
+import Fade from 'react-reveal/Fade';
+
 
 // import Car from '../../Components/Slider';
 
@@ -21,15 +23,10 @@ const Home = () => {
   return <div className="conHome">
     <div className="Home">
       <Navbar></Navbar>
-
       <Welcome></Welcome>
       <About />
-
       <PnD></PnD>
       <VnF></VnF>
-      <ScrollAnimation animateIn="fadeIn">
-        Some Text
-      </ScrollAnimation>
       <Carousel />
     </div>
 

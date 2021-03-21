@@ -8,6 +8,7 @@ import fire from "../../Scripts/Fire"
 import { CircularProgress } from "@material-ui/core";
 import Loader from "../../Components/Loader/Loader";
 
+import Slide from 'react-reveal/Fade';
 
 let generateCards = (users) => {
     // console.log("user", users);
@@ -24,7 +25,7 @@ let generateCards = (users) => {
         counter++;
     }
 
-    return cardsRow;
+    return <Slide bottom >{cardsRow}</Slide>;
 }
 
 let Teams = () => {
@@ -37,13 +38,20 @@ let Teams = () => {
 
     return <div className="teams-page">
         <Navbar></Navbar>
+
         <div className="team-header">Meet The Team</div>
+
         <div className="profile-page">
+
             <div className="h-profile">
                 {generateCards(user)}
                 {/* <Profile name="data" src={logo} info="some lorem data"></Profile> */}
             </div>
+
+
         </div>
+
+
     </div>
 }
 

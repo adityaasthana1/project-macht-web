@@ -5,6 +5,9 @@ import fire from "../../Scripts/Fire";
 import Loader from "../../Components/Loader/Loader";
 import "./Productpage.css";
 
+import Slide from 'react-reveal/Fade';
+
+
 let Productpage = (props) => {
     const { prod } = useParams();
     let [product, setProduct] = useState(null);
@@ -18,26 +21,28 @@ let Productpage = (props) => {
         }
         else {
 
-            return <div className="Prodpage">
-                <div className="ProdCont">
-                    <h1>{product.Name}</h1>
+            return <Slide bottom>
+                <div className="Prodpage">
+                    <div className="ProdCont">
+                        <h1>{product.Name}</h1>
 
-                    <div className="Prodline"></div>
+                        <div className="Prodline"></div>
 
-                    <div className="ProdInfo">
-                        <div className="ProdHolder">
-                            <img className="ProdImg" src={product.img} alt={product.Name}></img>
+                        <div className="ProdInfo">
+                            <div className="ProdHolder">
+                                <img className="ProdImg" src={product.img} alt={product.Name}></img>
+                            </div>
+                            <div className="ProdMain">{product.main}</div>
                         </div>
-                        <div className="ProdMain">{product.main}</div>
+
+
+
+                        <div className="ProdDesc">
+                            {product.Data}
+                        </div>
                     </div>
-
-
-
-                    <div className="ProdDesc">
-                        {product.Data}
-                    </div>
-                </div>
-            </ div>
+                </ div>
+            </Slide>
         }
     }
 

@@ -83,7 +83,6 @@ let Header = (props) => {
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <NavItem data={"Home"} onClick={() => { history.push("./") }}></NavItem>
-            <NavItem data={"About"}></NavItem>
             <NavItem data={"Product"} onClick={openMenu}></NavItem>
             {/* <Dropdown text='Product' id="drp" options={options} error /> */}
             <NavItem data={"Team"} onClick={() => { history.push("./teams") }}></NavItem>

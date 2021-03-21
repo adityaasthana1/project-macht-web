@@ -1,13 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+
 .App{
     background-color: black;
     display: flex;
-    color: #666;
+    color: white !important;
     
     justify-content: center;
 }
 
 h3{
-    color: white    ;
+    color: white;
+}
+
+h1{
+    font-family: 'Karla', sans-serif !important;
 }
 
 
@@ -21,4 +29,5 @@ h3{
 
 body{
     background-color: black !important;
+    
 }
