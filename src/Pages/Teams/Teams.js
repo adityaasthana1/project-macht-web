@@ -9,6 +9,7 @@ import { CircularProgress } from "@material-ui/core";
 import Loader from "../../Components/Loader/Loader";
 
 import Slide from 'react-reveal/Fade';
+import FooterPage from "../../Components/Footer/Footer2";
 
 let generateCards = (users) => {
     // console.log("user", users);
@@ -25,7 +26,7 @@ let generateCards = (users) => {
         counter++;
     }
 
-    return <Slide bottom >{cardsRow}</Slide>;
+    return <Slide bottom>{cardsRow}</Slide>;
 }
 
 let Teams = () => {
@@ -51,7 +52,7 @@ let Teams = () => {
 
         </div>
 
-
+        <FooterPage></FooterPage>
     </div>
 }
 

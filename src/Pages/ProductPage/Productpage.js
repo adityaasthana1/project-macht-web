@@ -6,6 +6,7 @@ import Loader from "../../Components/Loader/Loader";
 import "./Productpage.css";
 
 import Slide from 'react-reveal/Fade';
+import FooterPage from "../../Components/Footer/Footer2";
 
 
 let Productpage = (props) => {
@@ -24,7 +25,7 @@ let Productpage = (props) => {
             return <Slide bottom>
                 <div className="Prodpage">
                     <div className="ProdCont">
-                        <h1>{product.Name}</h1>
+                        <div className="Prod-loc">Product / {product.Name}</div>
 
                         <div className="Prodline"></div>
 
@@ -32,16 +33,26 @@ let Productpage = (props) => {
                             <div className="ProdHolder">
                                 <img className="ProdImg" src={product.img} alt={product.Name}></img>
                             </div>
-                            <div className="ProdMain">{product.main}</div>
+                            <div>
+                                <div className="ProdHead">{product.Name}</div>
+                                <div className="ProdMain">{product.main}</div>
+                                <div class='button -dark center'>BUY</div>
+
+                            </div>
+
+
+
                         </div>
-
-
-
                         <div className="ProdDesc">
                             {product.Data}
                         </div>
+
+
+
                     </div>
                 </ div>
+
+                <FooterPage></FooterPage>
             </Slide>
         }
     }
