@@ -26,7 +26,20 @@ let generateCards = (users) => {
         counter++;
     }
 
-    return <Slide bottom>{cardsRow}</Slide>;
+    return <div><div className="team-header">Meet The Team</div>
+
+        <div className="profile-page">
+
+            <div className="h-profile">
+                <Slide bottom>{cardsRow}</Slide>
+
+            </div>
+
+
+        </div>
+
+        <FooterPage></FooterPage>
+    </div>
 }
 
 let Teams = () => {
@@ -40,19 +53,10 @@ let Teams = () => {
     return <div className="teams-page">
         <Navbar></Navbar>
 
-        <div className="team-header">Meet The Team</div>
 
-        <div className="profile-page">
+        {generateCards(user)}
+        {/* <Profile name="data" src={logo} info="some lorem data"></Profile> */}
 
-            <div className="h-profile">
-                {generateCards(user)}
-                {/* <Profile name="data" src={logo} info="some lorem data"></Profile> */}
-            </div>
-
-
-        </div>
-
-        <FooterPage></FooterPage>
     </div>
 }
 
