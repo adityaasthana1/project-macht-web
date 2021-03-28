@@ -8,7 +8,7 @@ import VnF from '../../Components/VnF/VnF';
 import "./home.css";
 import Carousel from '../../Components/carousel/index';
 import FooterPage from '../../Components/Footer/Footer2';
-
+import Page from 'react-page-loading'
 import Fade from 'react-reveal/Fade';
 
 
@@ -20,18 +20,24 @@ import Fade from 'react-reveal/Fade';
 
 const Home = () => {
 
-  return <div className="conHome">
-    <div className="Home">
-      <Navbar></Navbar>
-      <Welcome></Welcome>
-      <About />
-      <PnD></PnD>
-      <VnF></VnF>
-      <Carousel />
-    </div>
+  return <div>
+    <Page loader={"bar"} color={"#A9A9A9"} size={4}>
+      <div className="conHome">
 
-    <FooterPage />
-  </div>
+        <div className="Home">
+          <Navbar></Navbar>
+          <Welcome></Welcome>
+          <About />
+          <PnD></PnD>
+          <VnF></VnF>
+          <Carousel />
+        </div>
+
+        <FooterPage />
+
+      </div>
+    </Page>
+  </div >
 };
 
 export default Home;

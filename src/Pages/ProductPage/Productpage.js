@@ -8,6 +8,9 @@ import "./Productpage.css";
 import Slide from 'react-reveal/Fade';
 import FooterPage from "../../Components/Footer/Footer2";
 
+import Page from 'react-page-loading';
+
+
 
 let Productpage = (props) => {
     const { prod } = useParams();
