@@ -73,3 +73,15 @@
       opacity: 0;
     }
   }
+
+
+
+@media(max-width : 768px){
+  .team-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 5rem;
+  }
+}

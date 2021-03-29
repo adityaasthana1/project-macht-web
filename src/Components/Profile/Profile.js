@@ -12,7 +12,7 @@ let Profile = (props) => {
     //         </div>
     //     </div>
 
-    return <figure class="snip1344"><img src={props.img} alt="profile-sample1" class="background" /><img src={props.img} alt="profile-sample1" class="profile" />
+    return <figure class="snip1344"><img src={props.img} alt="profile-sample1" class="background" /><img src={props.img} alt="ERR : No profile " class="profile" />
         <figcaption>
             <h3>{props.name}<span>{props.desc}</span></h3>
 
