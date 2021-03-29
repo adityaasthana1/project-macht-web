@@ -37,3 +37,15 @@
 .pndCont{
     margin: 0 15px;
 }
+
+
+@media(max-width : 768px){
+    .Product{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .Product > div{
+        width: 100%;
+    }
+}
