@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./addprofile.css";
 import fire from "../../Scripts/Fire";
 import Profile from "../../Components/Profile/Profile";
+import calcId from "../../Scripts/calcId";
 
 let AddProfile = () => {
 
@@ -28,7 +29,8 @@ let AddProfile = () => {
             e[name] = {
                 name: name,
                 desc: desc,
-                img: await fire.uploadImage(image, name)
+                img: await fire.uploadImage(image, name),
+                id: calcId(name)
             };
 
             fire.upload(e);

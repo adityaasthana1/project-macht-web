@@ -12,7 +12,7 @@ import Slide from 'react-reveal/Fade';
 import FooterPage from "../../Components/Footer/Footer2";
 
 let generateCards = (users) => {
-    // console.log("user", users);
+    console.log("user", users);
     if (!users) {
         return <Loader></Loader>
     }
@@ -22,7 +22,7 @@ let generateCards = (users) => {
 
 
     for (let data in users) {
-        cardsRow.push(<Profile name={users[data].name} desc={users[data].desc} img={users[data].img} key={counter}></Profile>);
+        cardsRow.push(<Profile id={users[data].id} name={users[data].name} desc={users[data].desc} img={users[data].img} key={counter}></Profile>);
         counter++;
     }
 

@@ -99,6 +99,22 @@
     margin-top: 50px;
 }
 
+@media(max-width:768px){
+    
+    .ProdCont{
+        width: 95%;
+    }
+
+    .ProdInfo{
+        flex-direction: column;
+    }
+
+    
+    .ProdInfo > div{
+        width: 100%;
+    }
+}
+
 
 :root {
     --color-dark: #161616;

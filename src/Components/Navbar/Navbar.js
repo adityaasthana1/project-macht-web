@@ -34,16 +34,16 @@ let Header = (props) => {
     setAnchorEl(null);
 
     if (prod === 0) {
-      history.push("./product-Amanda");
+      history.push("/product-Amanda");
       console.log(props.setUpd);
       upd(prod);
     }
     else if (prod === 1) {
-      history.push("./product-Wally");
+      history.push("/product-Wally");
       upd(prod);
     }
     else if (prod === 2) {
-      history.push("./product-CompVis");
+      history.push("/product-CompVis");
       upd(prod);
     }
   }
@@ -109,13 +109,13 @@ let Header = (props) => {
                   <ListItemText primary="Project Macht" />
                 </ListItem>
                 <ListItem button>
-                  <ListItemText primary="Home" onClick={() => { history.push("./") }} />
+                  <ListItemText primary="Home" onClick={() => { history.push("/") }} />
                 </ListItem>
                 <ListItem button>
                   <ListItemText primary="Product" onClick={openMenu} />
                 </ListItem>
                 <ListItem button>
-                  <ListItemText primary="Team" onClick={() => { history.push("./teams") }} />
+                  <ListItemText primary="Team" onClick={() => { history.push("/teams") }} />
                 </ListItem>
                 <ListItem button>
                   <ListItemText primary="Contact us" />
@@ -129,10 +129,10 @@ let Header = (props) => {
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <NavItem data={"Home"} onClick={() => { history.push("./") }}></NavItem>
+            <NavItem data={"Home"} onClick={() => { history.push("/") }}></NavItem>
             <NavItem data={"Product"} onClick={openMenu}></NavItem>
             {/* <Dropdown text='Product' id="drp" options={options} error /> */}
-            <NavItem data={"Team"} onClick={() => { history.push("./teams") }}></NavItem>
+            <NavItem data={"Team"} onClick={() => { history.push("/teams") }}></NavItem>
             <NavItem data={"Contact Us"}></NavItem>
 
 
