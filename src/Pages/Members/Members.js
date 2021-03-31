@@ -1,51 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import Navbar from "../../Components/Navbar/Navbar";
 import Slide from 'react-reveal/Fade';
 import FooterPage from "../../Components/Footer/Footer2";
 import "./Members.css";
+import fire from "../../Scripts/Fire";
 
 
 let Members = (props) => {
     let { member } = useParams();
-    console.log(member);
-    console.log("ran");
+    let [data, setData] = useState("None");
+    useEffect(async () => {
+        setData(await fire.getMember("Members"));
+    }, [])
+
     return <div>
-        <Navbar></Navbar>
+        <Navbar></Navbar>0
         <div>Members {member}</div>
 
         <Slide bottom>
             <div className="MembersPage">
                 <div className="MembersCont">
-                    <div className="Prod-loc"> {member} </div>
+                    <div className="Prod-loc"> Member / {member.toUpperCase()} </div>
 
-                    <div className="Prodline"></div>
+                    <div className="MemberLine"></div>
 
-                    <div className="ProdInfo">
-                        <div className="ProdHolder">
-
+                    <div className="MemberInfo">
+                        <div className="MemberLeft">
+                            <div className="MemberImg"></div>
+                            <div className="MemberSocial"></div>
                         </div>
-                        <div>
-                            <div className="ProdHead"></div>
-                            <div className="ProdMain"></div>
-                            <div class='button -dark center'>BUY</div>
-
+                        <div className="MemberInfo">
+                            <div className="MemberHeader">{data.Temp}</div>
+                            <div className="MemberBaseInfo"></div>
                         </div>
-
-
-
-                    </div>
-                    <div className="ProdDesc">
-
                     </div>
 
+                    <div className="MemberExtra"></div>
 
 
                 </div>
             </ div>
         </Slide>
         <FooterPage></FooterPage>
-    </div>
+    </div >
 }
 
 export default Members;

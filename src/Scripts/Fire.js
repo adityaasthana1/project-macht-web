@@ -39,12 +39,15 @@ let fire = (() => {
     }
 
     let upload = (data) => {
+
         db.collection("Web").doc("Web").set(data)
             .then(() => {
                 console.log("doc uploaded");
             }).catch((err) => {
                 console.error(err);
             })
+
+
     }
 
 
@@ -68,7 +71,27 @@ let fire = (() => {
         return data;
     }
 
+    let getMember = async (inpMember) => {
+        let data;
 
-    return { init, getUser, upload, uploadImage, fetchProduct };
+        let member = db.collection("Members").doc(inpMember);
+
+        await member.get().then((doc) => {
+            if (doc.exists) {
+                data = doc.data();
+            }
+
+            else {
+                data = {}
+            }
+        })
+
+
+        return data;
+
+    }
+
+
+    return { init, getUser, upload, uploadImage, fetchProduct, getMember };
 })();
 export default fire;
