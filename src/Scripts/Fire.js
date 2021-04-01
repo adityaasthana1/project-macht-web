@@ -71,6 +71,15 @@ let fire = (() => {
         return data;
     }
 
+    let uploadMember = async (details) => {
+        db.collection("Members").doc(details.id).set(details)
+            .then(() => {
+                console.log("details uploaded");
+            }).catch((err) => {
+                console.error(err);
+            })
+    }
+
     let getMember = async (inpMember) => {
         let data;
 
@@ -79,6 +88,7 @@ let fire = (() => {
         await member.get().then((doc) => {
             if (doc.exists) {
                 data = doc.data();
+                console.log(data);
             }
 
             else {
@@ -92,6 +102,6 @@ let fire = (() => {
     }
 
 
-    return { init, getUser, upload, uploadImage, fetchProduct, getMember };
+    return { init, getUser, upload, uploadImage, fetchProduct, getMember, uploadMember };
 })();
 export default fire;
