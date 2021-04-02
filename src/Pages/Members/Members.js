@@ -37,7 +37,7 @@ let Members = (props) => {
                         <div className="MemberLine"></div>
 
                         <div className="MemberInfo">
-                            <div className="MemberKnows">WebDeveloper</div>
+                            <div className="MemberKnows">WebDevedloper</div>
 
                             <div className="MemberLine"></div>
 
