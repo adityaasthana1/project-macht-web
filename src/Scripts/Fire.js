@@ -88,10 +88,11 @@ let fire = (() => {
         await member.get().then((doc) => {
             if (doc.exists) {
                 data = doc.data();
-                console.log(data);
+                // console.log(data);
             }
 
             else {
+                console.log("ERR : could not find member");
                 data = {}
             }
         })

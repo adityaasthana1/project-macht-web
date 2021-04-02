@@ -26,7 +26,7 @@ let generateCards = (users) => {
         counter++;
     }
 
-    console.log(cardsRow);
+
     return <div>
         <div className="team-header">Meet The Team</div>
 
