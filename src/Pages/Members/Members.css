@@ -95,24 +95,14 @@
 }
 
 
-.ProdDesc{
-    margin: 15px 45px
-}
 
 
-.ProdInfo{
-    margin: 15px 45px;
-    display: flex;
-}
+
 
 .ProdInfo > div{
     width: 50%;
 }
 
-.ProdImg{
-    /* max-width: 350px; */
-    width: 100%;
-}
 
 .ProdHolder{
     display: flex;
@@ -140,9 +130,7 @@
     padding: 10px;
 }
 
-.ProdDesc{
-    margin-top: 50px;
-}
+
 
 @media(max-width:768px){
     

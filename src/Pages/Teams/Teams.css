@@ -38,7 +38,7 @@
     font-size: 10rem;
 
     padding: 50px 0;
-
+    transition: all 0.2s;
 }
 
 .lds-ripple {
@@ -75,6 +75,15 @@
   }
 
 
+@media(max-width : 900px){
+  .team-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 7.5rem;
+  }
+}
 
 @media(max-width : 768px){
   .team-header{

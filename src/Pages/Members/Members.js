@@ -44,7 +44,7 @@ let Members = (props) => {
 
                             <div className="MemberBaseInfo"> {data.info || "No info"} </div>
                         </div>
-a
+
 
                     </div>
 

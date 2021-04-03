@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../Components/Navbar/Navbar"
 import Profile from "../../Components/Profile/Profile"
-import "./profilepage.css"
+import "./Teams.css"
 // import logo from "../../Img/temp.jpg"
 import profileData from "../../Data/Profiles"
 import fire from "../../Scripts/Fire"
