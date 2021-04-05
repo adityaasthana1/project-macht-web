@@ -20,5 +20,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: relative;
+}
+
+
+.WelcmVideo{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    filter: blur(3px) ;
+}
+
+.mainImage{
+    position: absolute;
+
+    width: 70%;
 }
 

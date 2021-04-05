@@ -1,6 +1,12 @@
 .Product{
     display: flex;
     margin: 200px 0;
+    width: 70%;
+}
+
+.prodParent{
+    display: flex;
+    justify-content: center;
 }
 
 .Product > div{
@@ -43,6 +49,7 @@
     .Product{
         flex-direction: column-reverse;
         align-items: center;
+        width: 90%;
     }
 
     .Product > div{

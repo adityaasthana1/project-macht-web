@@ -1,6 +1,6 @@
 .Home{
 
-    width: 70%;
+    width: 100%;
 }
 
 .conHome{
@@ -11,7 +11,5 @@
 }
 
 @media(max-width : 768px){
-    .Home{
-      width: 90%;  
-    }
+    
 }

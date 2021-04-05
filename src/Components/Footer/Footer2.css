@@ -1,3 +1,7 @@
+.FooterMain{
+  display: flex ;
+}
+
 
 .footer-dark {
     padding:50px 0;
@@ -6,6 +10,8 @@
     margin-top: 200px;
     /* background-color: red; */
   }
+
+  
   
   .footer-dark h3 {
     margin-top:0;
