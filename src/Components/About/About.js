@@ -35,13 +35,13 @@ let About = () => {
 
         <div className="sec dark">
             <Fade left>
-                <div>
+                <div className="AboutImgDown">
                     <img src={about} className="image" alt="about"></img>
                 </div>
             </Fade>
             <Fade right>
                 <div className="aboutInfo">
-                    <h1 className="large">We bring ease to your daily life</h1>
+                    <h1 className="AboutEase">We bring ease to your daily life</h1>
                     <p className="aboutInfo">Our aim here at Project Macht is to give access to revolutionary technology to people
                     who cannot afford it. With this aim driving us, we have created a complete solution that
                     includes a smart assistant that can do whatever a commercial AI-based assistant do and much more;

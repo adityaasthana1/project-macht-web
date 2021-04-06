@@ -57,6 +57,16 @@
     color: #fff;
 }
 
+.AboutEase{
+    font-size: 4rem;
+    line-height: 1.4;
+}
+
+.AboutImgDown{
+    display: flex;
+    align-items: center;
+}
+
 
 @media(max-width : 768px){
     .sec{
