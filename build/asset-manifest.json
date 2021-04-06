@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "./static/css/main.719e2e04.chunk.css",
+    "main.js": "./static/js/main.5510e95e.chunk.js",
+    "main.js.map": "./static/js/main.5510e95e.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.bcb0f8c3.js",
+    "runtime-main.js.map": "./static/js/runtime-main.bcb0f8c3.js.map",
+    "static/css/2.3d1bb0fd.chunk.css": "./static/css/2.3d1bb0fd.chunk.css",
+    "static/js/2.ba8028e3.chunk.js": "./static/js/2.ba8028e3.chunk.js",
+    "static/js/2.ba8028e3.chunk.js.map": "./static/js/2.ba8028e3.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/2.3d1bb0fd.chunk.css.map": "./static/css/2.3d1bb0fd.chunk.css.map",
+    "static/css/main.719e2e04.chunk.css.map": "./static/css/main.719e2e04.chunk.css.map",
+    "static/js/2.ba8028e3.chunk.js.LICENSE.txt": "./static/js/2.ba8028e3.chunk.js.LICENSE.txt",
+    "static/media/AboutA.1448a7b2.jpg": "./static/media/AboutA.1448a7b2.jpg",
+    "static/media/semantic.min.css": "./static/media/outline-icons.ddae9b1b.woff",
+    "static/media/graph.12a6ee7e.mp4": "./static/media/graph.12a6ee7e.mp4",
+    "static/media/macht-logo.ab0563e9.png": "./static/media/macht-logo.ab0563e9.png",
+    "static/media/neural.ecab66f8.png": "./static/media/neural.ecab66f8.png",
+    "static/media/right-image.4c250489.png": "./static/media/right-image.4c250489.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bcb0f8c3.js",
+    "static/css/2.3d1bb0fd.chunk.css",
+    "static/js/2.ba8028e3.chunk.js",
+    "static/css/main.719e2e04.chunk.css",
+    "static/js/main.5510e95e.chunk.js"
+  ]
+}

@@ -1,6 +1,12 @@
 .Product{
     display: flex;
     margin: 200px 0;
+    width: 70%;
+}
+
+.prodParent{
+    display: flex;
+    justify-content: center;
 }
 
 .Product > div{
@@ -9,4 +15,44 @@
 
 .image{
     width: 100%;
+}
+
+
+.pndHolder{
+    margin-top: 30px;
+}
+
+.pndDesc{
+    padding-left: 10px;
+    padding: 0 10px;
+    font-weight: 400;
+    color: #fff;
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+}
+
+.pndProdHeader{
+    font-size: 3rem;
+    margin: 15px 0  !important;
+    font-weight: 500;
+}
+
+.pndCont{
+    margin: 0 15px;
+}
+
+
+@media(max-width : 768px){
+    .Product{
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 90%;
+    }
+
+    .Product > div{
+        width: 100%;
+    }
 }

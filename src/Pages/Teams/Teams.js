@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../Components/Navbar/Navbar"
 import Profile from "../../Components/Profile/Profile"
-import "./profilepage.css"
+import "./Teams.css"
 // import logo from "../../Img/temp.jpg"
 import profileData from "../../Data/Profiles"
 import fire from "../../Scripts/Fire"
@@ -12,7 +12,7 @@ import Slide from 'react-reveal/Fade';
 import FooterPage from "../../Components/Footer/Footer2";
 
 let generateCards = (users) => {
-    // console.log("user", users);
+    console.log("user", users);
     if (!users) {
         return <Loader></Loader>
     }
@@ -22,22 +22,22 @@ let generateCards = (users) => {
 
 
     for (let data in users) {
-        cardsRow.push(<Profile name={users[data].name} desc={users[data].desc} img={users[data].img} key={counter}></Profile>);
+        cardsRow.push(<Profile id={users[data].id} name={users[data].name} desc={users[data].desc} img={users[data].img} key={counter}></Profile>);
         counter++;
     }
 
-    return <div><div className="team-header">Meet The Team</div>
+
+    return <div>
+        <div className="team-header">Meet The Team</div>
 
         <div className="profile-page">
 
             <div className="h-profile">
                 <Slide bottom>{cardsRow}</Slide>
-
             </div>
 
 
         </div>
-
         <FooterPage></FooterPage>
     </div>
 }
@@ -56,6 +56,8 @@ let Teams = () => {
 
         {generateCards(user)}
         {/* <Profile name="data" src={logo} info="some lorem data"></Profile> */}
+
+
 
     </div>
 }

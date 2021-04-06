@@ -1,6 +1,6 @@
 .Home{
 
-    width: 70%;
+    width: 100%;
 }
 
 .conHome{
@@ -10,6 +10,6 @@
     align-items: center;
 }
 
-.large{
-    font-size: 4rem;
+@media(max-width : 768px){
+    
 }

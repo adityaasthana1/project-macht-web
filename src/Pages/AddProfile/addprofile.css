@@ -5,3 +5,7 @@
 label{
     margin-right: 25px;
 }
+
+.addForm > div{
+    margin: 15px 0;
+}
