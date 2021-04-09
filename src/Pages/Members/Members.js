@@ -5,6 +5,7 @@ import Slide from 'react-reveal/Fade';
 import FooterPage from "../../Components/Footer/Footer2";
 import "./Members.css";
 import fire from "../../Scripts/Fire";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 let Members = (props) => {
@@ -26,24 +27,31 @@ let Members = (props) => {
 
                     <div className="MemberLine"></div>
 
-                    <div className="MemberInfo">
+                    <div className="MemberMain">
                         <div className="MemberLeft">
+
                             <div className="MemberImg">
                                 <img className="MemImg" src={data.img}></img>
                             </div>
-                            <div className="MemberName">{data.name || "Member"}</div>
-                            <div className="MemberSocial"></div>
+                            <div className="MemberInfo">
+                                <div className="MemberName">{data.name || "Member"}</div>
+                                <div className="MemberSocial">
+
+                                </div>
+                                {/* <div className="MemberBaseInfo"> {data.info || "No info"} </div> */}
+                            </div>
+
                         </div>
 
                         <div className="MemberLine"></div>
 
-                        <div className="MemberInfo">
+                        {/* <div className="MemberInfo">
                             <div className="MemberKnows">{data.role || "Developer"}</div>
 
                             <div className="MemberLine"></div>
 
-                            <div className="MemberBaseInfo"> {data.info || "No info"} </div>
-                        </div>
+
+                        </div> */}
 
 
                     </div>
