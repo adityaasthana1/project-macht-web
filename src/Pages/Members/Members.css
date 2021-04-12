@@ -52,6 +52,20 @@
     display: flex;
 }
 
+.MemberSocial{
+    margin-left: 10px;
+}
+
+.MemberSocial > .MemberIcon{
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #ccc;
+}
+
+.MemberSocial > .MemberIcon:hover{
+    color: #fff;
+    cursor: pointer;
+}
 
 
 
@@ -88,8 +102,9 @@
 .MemberInfo{
     display: flex;
     flex-direction: column;
-    padding: 15px 25px;
     width: 70%;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .MemberKnows{
@@ -98,6 +113,7 @@
     justify-content: center;
     font-size: 2rem;
     margin: 10px 0;
+    
 }
 
 .MemberBaseInfo{
@@ -105,6 +121,19 @@
     margin: 15px 0;
 }
 
+.MemberSkills{
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+
+.MembersRole{
+    margin-left: 5px;
+    color: #f39c12;
+    font-size: 2.5rem;
+    line-height: 1.4;
+    font-weight: 700;
+}
 
 
 

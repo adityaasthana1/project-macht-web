@@ -4,6 +4,7 @@ import fire from "../../Scripts/Fire";
 import Profile from "../../Components/Profile/Profile";
 import calcId from "../../Scripts/calcId";
 import "./addprofile.css";
+import { Slide } from "@material-ui/core";
 
 let AddProfile = () => {
 
@@ -12,6 +13,7 @@ let AddProfile = () => {
     let [image, setImage] = useState("#");
     let [role, setRole] = useState("");
     let [info, setInfo] = useState("");
+    let [skills, setSkills] = useState("");
 
     let nameSetter = (e) => {
         setName(e.target.value);
@@ -33,6 +35,12 @@ let AddProfile = () => {
         setInfo(e.target.value);
     }
 
+    let descSkills = (e) => {
+        setSkills(e.target.value);
+    }
+
+
+
     let submitData = () => {
         fire.getUser().then(async (e) => {
             console.log("submit data", e);
@@ -51,7 +59,8 @@ let AddProfile = () => {
                 img: img,
                 id: (name.toLowerCase()),
                 role: role,
-                info: info
+                info: info,
+                skills: skills
             }
 
             await fire.upload(e);
@@ -80,6 +89,11 @@ let AddProfile = () => {
                 <div>
                     <label>MemberDesc</label>
                     <textarea type="text" onChange={descInfo} value={info}></textarea>
+                </div>
+
+                <div>
+                    <label>Skills</label>
+                    <textarea type="text" onChange={descSkills} value={skills}></textarea>
                 </div>
 
 

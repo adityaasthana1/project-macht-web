@@ -1,7 +1,7 @@
 let calcId = (name) => {
     let id = "";
     for (let i = 0; i < name.length; i++) {
-        if (name[i] != " ") {
+        if (name[i] !== " ") {
             id += name[i];
         }
     }
