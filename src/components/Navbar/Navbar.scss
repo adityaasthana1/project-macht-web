@@ -31,9 +31,10 @@
   .navbar-brand{
     font:18px sans-serif !important;
     text-transform:uppercase;
-    color:#EA215C !important;
+    color:#fff !important;
     letter-spacing:2px;
     margin-top:2px;
+    font-weight: 600  !important;
   }
   
   .nav{
@@ -43,7 +44,7 @@
       font:500 14px sans-serif ;
       letter-spacing:2px;
       padding:16px !important;
-      color:#a3bfc6 !important;
+      color:#fff !important;
       text-transform:uppercase;
       position:relative;
       z-index:1000;
@@ -78,7 +79,7 @@
   }
   
   .icon-bar{
-    background:#a3bfc6 !important;
+    background:#fff !important;
   }
   
   .hover{

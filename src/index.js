@@ -33,7 +33,8 @@ ReactDOM.render(
           <Route exact path="/addprofile" component={AddProfile}></Route>
           <Route exact path="/product-:prod" component={Productpage}></Route>
           <Route exact path="/members/:member" component={Members}></Route>
-          <Contact/>
+          <Route exact path="/contactus" component={Contact}></Route>
+          <Contact />
         </Switch>
 
       </HashRouter>

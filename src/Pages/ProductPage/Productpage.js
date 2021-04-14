@@ -39,7 +39,7 @@ let Productpage = (props) => {
                             <div>
                                 <div className="ProdHead">{product.Name}</div>
                                 <div className="ProdMain">{product.main}</div>
-                                <div class='button -dark center'>BUY</div>
+                                <div class='button -dark center customButton'>BUY</div>
 
                             </div>
 

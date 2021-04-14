@@ -118,7 +118,7 @@ let Header = (props) => {
                   <ListItemText primary="Team" onClick={() => { history.push("/teams") }} />
                 </ListItem>
                 <ListItem button>
-                  <ListItemText primary="Contact us" />
+                  <ListItemText primary="Contact us" onClick={() => { console.log("ran") }} />
                 </ListItem>
               </List>
             </div>
@@ -133,7 +133,7 @@ let Header = (props) => {
             <NavItem data={"Product"} onClick={openMenu}></NavItem>
             {/* <Dropdown text='Product' id="drp" options={options} error /> */}
             <NavItem data={"Team"} onClick={() => { history.push("/teams") }}></NavItem>
-            <NavItem data={"Contact Us"}></NavItem>
+            <NavItem data={"Contact Us"} onClick={() => { history.push("/contactus") }}></NavItem>
 
 
             <Menu
