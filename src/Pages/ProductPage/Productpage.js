@@ -36,7 +36,7 @@ let Productpage = (props) => {
                             <div className="ProdHolder">
                                 <img className="ProdImg" src={product.img} alt={product.Name}></img>
                             </div>
-                            <div>
+                            <div className="ProdMainInfo">
                                 <div className="ProdHead">{product.Name}</div>
                                 <div className="ProdMain">{product.main}</div>
                                 <div class='button -dark center customButton'>BUY</div>
