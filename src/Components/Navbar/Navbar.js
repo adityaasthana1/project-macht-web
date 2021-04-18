@@ -10,6 +10,7 @@ import Productpage from "../../Pages/ProductPage/Productpage";
 import { propTypes } from "react-bootstrap/esm/Image";
 import Drawer from '@material-ui/core/Drawer';
 import { Divider, List, ListItem, ListItemText } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 //Header Component
 let Header = (props) => {
@@ -108,17 +109,17 @@ let Header = (props) => {
                 <ListItem height="50%" >
                   <ListItemText primary="Project Macht" />
                 </ListItem>
-                <ListItem button>
-                  <ListItemText primary="Home" onClick={() => { history.push("/") }} />
+                <ListItem button onClick={() => { history.push("/") }}>
+                  <ListItemText primary="Home" />
                 </ListItem>
-                <ListItem button>
-                  <ListItemText primary="Product" onClick={openMenu} />
+                <ListItem button onClick={openMenu}>
+                  <ListItemText primary="Product" />
                 </ListItem>
-                <ListItem button>
-                  <ListItemText primary="Team" onClick={() => { history.push("/teams") }} />
+                <ListItem button onClick={() => { history.push("/teams") }}>
+                  <ListItemText primary="Team" />
                 </ListItem>
-                <ListItem button>
-                  <ListItemText primary="Contact us" onClick={() => { console.log("ran") }} />
+                <ListItem button onClick={() => { console.log("ran") }} >
+                  <ListItemText primary="Contact us" />
                 </ListItem>
               </List>
             </div>
@@ -129,11 +130,11 @@ let Header = (props) => {
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <NavItem data={"Home"} onClick={() => { history.push("/") }}></NavItem>
+            <NavItem data={"Home"} to={"/"}></NavItem>
             <NavItem data={"Product"} onClick={openMenu}></NavItem>
             {/* <Dropdown text='Product' id="drp" options={options} error /> */}
-            <NavItem data={"Team"} onClick={() => { history.push("/teams") }}></NavItem>
-            <NavItem data={"Contact Us"} onClick={() => { history.push("/contactus") }}></NavItem>
+            <NavItem data={"Team"} to={"/teams"} ></NavItem>
+            <NavItem data={"Contact Us"} to={"/contactus"}></NavItem>
 
 
             <Menu

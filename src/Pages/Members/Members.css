@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin-top: 100px;
 }
 
 .MembersPage{
@@ -192,10 +192,11 @@
 
 
 
-@media(max-width:768px){
+@media(max-width:900px){
     
     .MembersCont{
         width: 95%;
+        flex-direction: column;
     }
 
     .ProdInfo{
@@ -232,6 +233,15 @@
     .MemberSocial > .MemberIcon{
         font-size: 2rem;
         margin-top: 5px;
+    }
+
+    .MembersLeftCont{
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
+    .MembersHolder{
+        margin-top: 50px;
     }
 }
 

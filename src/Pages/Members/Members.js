@@ -38,7 +38,7 @@ let Members = (props) => {
 
     // console.log("member", data);
     return <div>
-        <Navbar></Navbar>0
+        <Navbar></Navbar>
         <div>Members {member}</div>
 
         <Slide bottom>
