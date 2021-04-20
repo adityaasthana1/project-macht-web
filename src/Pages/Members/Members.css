@@ -8,9 +8,15 @@
 }
 
 
+.MembersHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
 .MembersPage{
     width: 100%;
-    margin-top: 56px;
     min-height: 100vh;
 
     display: flex;
@@ -20,17 +26,14 @@
 }
 
 .MembersCont{
-
-
     display: flex;
-    flex-direction: column;
-    width: 80%;
+
+    width: 90%;
     align-self: center;
-    /* background-color: #111; */
     border-radius: 15px;
 
-    padding-top: 15px;
-    padding-bottom: 15px;
+    overflow: hidden;
+    background-color: #222;
 }
 
 .ProdCont > h1{
@@ -54,6 +57,7 @@
 
 .MemberSocial{
     margin-left: 10px;
+    z-index: 2;
 }
 
 .MemberSocial > .MemberIcon{
@@ -75,36 +79,45 @@
     height: 180px;
     border-radius: 50%;
     padding: 8px;
+    margin-top: 30px;
     /* box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5); */
     border: 1px solid #999;
+    z-index: 2;
 
 }
 
-.MemberImg{
+.MembersLeftCont{
     display: flex;
     /* align-items: center; */
-    justify-content: center;
-    padding: 15px 0;
+    flex-direction: column;
+    align-items: center;
     width: 30%;
+    position: relative;
+    background-color: #222;
+    overflow: hidden;
 }
 
 .MemberName{
     display: flex;
     font-size : 4rem;
-
+    z-index: 2;
 }
 
 .MemberMain{
     width: 100%;
 }
 
+.MembersRaise{
+    z-index: 2;
+}
 
 .MemberInfo{
     display: flex;
     flex-direction: column;
     width: 70%;
-    margin-top: 10px;
+    margin-top: 35px;
     margin-left: 10px;
+    margin-bottom: 15px;
 }
 
 .MemberKnows{
@@ -128,29 +141,46 @@
 
 
 .MembersRole{
-    margin-left: 5px;
-    color: #f39c12;
-    font-size: 2.5rem;
+    /* margin-left: 5px; */
+    /* color: #f39c12; */
+    font-size: 1.6rem;
     line-height: 1.4;
-    font-weight: 700;
+    font-weight: 400;
+}
+
+.MemBack{
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    filter: blur(4px) grayscale(0.8);
+}
+
+.MemGoBack{
+    z-index: 2;
+    position: absolute;
+    left:0;
+    margin: 15px;
+    font-size: 2rem;
+
+    cursor: pointer;
 }
 
 
 
 
-
+/* 
 .ProdInfo > div{
     width: 50%;
-}
+} */
 
 
-.ProdHolder{
+/* .ProdHolder{
     display: flex;
     align-items: center;
     justify-content: center;
 
     margin-right: 10px;
-}
+} */
 
 .Prod-loc{
     display: inline-block;
@@ -166,16 +196,17 @@
 }
 
 
-.ProdMain{
+/* .ProdMain{
     padding: 10px;
-}
+} */
 
 
 
-@media(max-width:768px){
+@media(max-width:900px){
     
     .MembersCont{
         width: 95%;
+        flex-direction: column;
     }
 
     .ProdInfo{
@@ -185,6 +216,42 @@
     
     .ProdInfo > div{
         width: 100%;
+    }
+
+    .MemberLeft{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .MemberInfo{
+        width: 95%;
+    }
+
+    .MemberName{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .MemberSocial{
+        display: flex;
+        justify-content: center;
+    }
+
+    .MemberSocial > .MemberIcon{
+        font-size: 2rem;
+        margin-top: 5px;
+    }
+
+    .MembersLeftCont{
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
+    .MembersHolder{
+        margin-top: 50px;
     }
 }
 

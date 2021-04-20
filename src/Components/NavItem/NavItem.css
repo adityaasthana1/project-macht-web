@@ -18,3 +18,8 @@
 .nav-item{
     cursor: pointer;
 }
+
+.NavLinks , .NavLinks:hover , .NavLinks:visited , .NavLinks:active{
+    text-decoration: none;
+    color: inherit;
+}
