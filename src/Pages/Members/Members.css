@@ -155,6 +155,16 @@
     filter: blur(4px) grayscale(0.8);
 }
 
+.MemGoBack{
+    z-index: 2;
+    position: absolute;
+    left:0;
+    margin: 15px;
+    font-size: 2rem;
+
+    cursor: pointer;
+}
+
 
 
 
