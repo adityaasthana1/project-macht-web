@@ -60,16 +60,21 @@
     z-index: 2;
 }
 
-.MemberSocial > .MemberIcon{
+.MemberSocial > a{
     font-size: 1.5rem;
     margin-right: 10px;
-    color: #ccc;
+    color: #ccc ;
 }
 
-.MemberSocial > .MemberIcon:hover{
-    color: #fff;
-    cursor: pointer;
+.MemberSocial > a{
+    color: #fff ;
+    cursor: pointer ;
 }
+
+/* .MemberSocial a , .MemberSocial:hover a , .MemberSocial:active a , .MemberSocial:visited a{
+    color: white !important;
+    text-decoration: none;
+} */
 
 
 
@@ -152,7 +157,7 @@
     position: absolute;
     z-index: 0;
     left: 0;
-    filter: blur(4px) grayscale(0.8);
+    filter: blur(3px) grayscale(0.5);
 }
 
 .MemGoBack{
@@ -181,6 +186,8 @@
 
     margin-right: 10px;
 } */
+
+
 
 .Prod-loc{
     display: inline-block;
@@ -240,7 +247,7 @@
         justify-content: center;
     }
 
-    .MemberSocial > .MemberIcon{
+    .MemberSocial > a{
         font-size: 2rem;
         margin-top: 5px;
     }

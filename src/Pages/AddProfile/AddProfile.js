@@ -14,6 +14,9 @@ let AddProfile = () => {
     let [role, setRole] = useState("");
     let [info, setInfo] = useState("");
     let [skills, setSkills] = useState("");
+    let [linked, setLinked] = useState("");
+    let [insta, setInsta] = useState("");
+    let [Git, setGit] = useState("");
 
     let nameSetter = (e) => {
         setName(e.target.value);
@@ -39,6 +42,19 @@ let AddProfile = () => {
         setSkills(e.target.value);
     }
 
+    let linkedSetter = (e) => {
+
+        setLinked(e.target.value);
+    }
+
+    let instaSetter = (e) => {
+        setInsta(e.target.value);
+    }
+
+    let gitSetter = (e) => {
+        setGit(e.target.value);
+    }
+
 
 
     let submitData = () => {
@@ -60,7 +76,10 @@ let AddProfile = () => {
                 id: (name.toLowerCase()),
                 role: role,
                 info: info,
-                skills: skills
+                skills: skills,
+                git: Git,
+                insta: insta,
+                linked: linked
             }
 
             await fire.upload(e);
@@ -102,6 +121,24 @@ let AddProfile = () => {
                     <label>Select image</label>
                     <input type="file" onChange={descImage}></input>
                 </div>
+
+                <div>
+                    <label>Social</label>
+                    <br />
+                    <label>Linked In</label>
+                    <input type="text" onChange={linkedSetter} value={linked}></input>
+
+                    <br />
+
+                    <label>Insta</label>
+                    <input type="text" onChange={instaSetter} value={insta}></input>
+
+                    <br />
+
+                    <label>Github</label>
+                    <input type="text" onChange={gitSetter} value={Git}></input>
+                </div>
+
                 <div>
                     <input type="button" value="Upload" onClick={submitData}></input>
                 </div>
