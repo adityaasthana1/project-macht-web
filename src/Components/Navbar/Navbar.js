@@ -118,7 +118,7 @@ let Header = (props) => {
                 <ListItem button onClick={() => { history.push("/teams") }}>
                   <ListItemText primary="Team" />
                 </ListItem>
-                <ListItem button onClick={() => { console.log("ran") }} >
+                <ListItem button onClick={() => { history.push("/contactus") }} >
                   <ListItemText primary="Contact us" />
                 </ListItem>
               </List>

@@ -4,8 +4,8 @@ import Contactus from '../../Components/ContactUs/Contactus';
 const Contact = () => {
     return (
         <div>
-        
-        <Contactus/>       
+
+            <Contactus />
         </div>
     );
 }

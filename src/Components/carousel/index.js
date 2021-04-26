@@ -6,6 +6,9 @@ import "./styles.css";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import officeImg from "./images/officeCar.jpg"
+import { useHistory } from "react-router";
+
+
 
 
 const content = [
@@ -45,8 +48,10 @@ const content = [
 
 
 
-const Carousel = () => (
-  <div>
+const Carousel = () => {
+
+  let history = useHistory();
+  return <div>
 
     <Slider className="slider-wrapper" autoplay={30000}  >
       {content.map((item, index) => (
@@ -58,7 +63,7 @@ const Carousel = () => (
           <div className="inner">
             <h1>{item.title}</h1>
             <p>{item.description}</p>
-            <button>{item.button}</button>
+            <button onClick={() => { history.push('./product-Amanda') }}>{item.button}</button>
           </div>
 
         </div>
@@ -68,6 +73,6 @@ const Carousel = () => (
 
 
   </div>
-);
+};
 
 export default Carousel;
