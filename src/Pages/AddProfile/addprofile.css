@@ -9,3 +9,8 @@ label{
 .addForm > div{
     margin: 15px 0;
 }
+
+.addForm textarea{
+    background-color: white;
+    color: black;
+}

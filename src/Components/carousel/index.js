@@ -1,45 +1,59 @@
 import React from "react";
-import Slider from "react-animated-slider";
-import "react-animated-slider/build/horizontal.css";
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
 import "./slider-animations.css";
 import "./styles.css";
+import { AiOutlineArrowLeft } from "react-icons/ai";
+
+import officeImg from "./images/officeCar.jpg"
+import { useHistory } from "react-router";
+
 
 
 
 const content = [
   {
-    title: "Vulputate Mollis Ultricies Fermentum Parturient",
+    title: "Affordability",
     description:
-      "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.",
+      "Lower is better; don't let anyone tell you otherwise when it comes to price. We made our products with the sole aim of impacting millions of lives and our automation solutions are the cheapest on the market: priced at half or even one-third the price of commercial solutions",
     button: "Read More",
-    image: "https://i.imgur.com/ZXBtVw7.jpg",
-    user: "Luan Gjokaj",
-    userProfile: "https://i.imgur.com/JSW6mEk.png"
+    image: "https://firebasestorage.googleapis.com/v0/b/ledautomation-1f46e.appspot.com/o/Carousel%2F1.jpg?alt=media&token=23558aeb-3661-46ec-8749-a92ea945fffd",
+
   },
   {
-    title: "Tortor Dapibus Commodo Aenean Quam",
+    title: "Customizability",
     description:
-      "Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.",
+      "We offer customizability as no one else does. Almost every part of our software can be tailored to your individual use and with regular updates, you will never miss out on new features.",
     button: "Discover",
-    image: "https://i.imgur.com/DCdBXcq.jpg",
-    user: "Erich Behrens",
-    userProfile: "https://i.imgur.com/0Clfnu7.png"
+    image: "https://firebasestorage.googleapis.com/v0/b/ledautomation-1f46e.appspot.com/o/Carousel%2F2.jpg?alt=media&token=cbc0531a-9f5e-4fdc-a94e-7805b448b236",
+
   },
   {
-    title: "Phasellus volutpat metus",
+    title: "Zero maintenance, plug and play design",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
+      "Once installed, you can just forget our devices are there. An entire home can be set up in two days or even less in some cases. You don't even need a professional for an install, with our easy to use manuals and intuitive design, you can do it yourselves!",
     button: "Buy now",
-    image: "https://i.imgur.com/DvmN8Hx.jpg",
-    user: "Bruno Vizovskyy",
-    userProfile: "https://i.imgur.com/4KeKvtH.png"
+    image: "https://firebasestorage.googleapis.com/v0/b/ledautomation-1f46e.appspot.com/o/Carousel%2F4.jpg?alt=media&token=b7354b89-a47d-4f80-9150-53d47f2a1b41",
+
+  },
+  {
+    title: "Cross-platform Usability",
+    description:
+      "Our AI is available across all platforms, be it on your smartphone, tablet or desktop, which makes it easy for you to monitor and control your space from anywhere.",
+    button: "Buy now",
+    image: "https://firebasestorage.googleapis.com/v0/b/ledautomation-1f46e.appspot.com/o/Carousel%2F4.jpg?alt=media&token=b7354b89-a47d-4f80-9150-53d47f2a1b41",
+
   }
 ];
 
-const Carousel = () => (
-  <div>
 
-    <Slider className="slider-wrapper" autoplay={3000} >
+
+const Carousel = () => {
+
+  let history = useHistory();
+  return <div>
+
+    <Slider className="slider-wrapper" autoplay={30000}  >
       {content.map((item, index) => (
         <div
           key={index}
@@ -49,19 +63,16 @@ const Carousel = () => (
           <div className="inner">
             <h1>{item.title}</h1>
             <p>{item.description}</p>
-            <button>{item.button}</button>
+            <button onClick={() => { history.push('./product-Amanda') }}>{item.button}</button>
           </div>
-          <section>
-            <img src={item.userProfile} alt={item.user} />
-            <span>
-              Posted by <strong>{item.user}</strong>
-            </span>
-          </section>
+
         </div>
       ))}
     </Slider>
 
+
+
   </div>
-);
+};
 
 export default Carousel;
