@@ -31,7 +31,7 @@ class SimpleMap extends Component {
     //     );
     // }
 
-    render() { <div>maps</div> }
+    render() { return <div>maps</div> }
 }
 
 export default SimpleMap;

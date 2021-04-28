@@ -1,9 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 
+:root{
+    --mWhite : #fff;
+    --mBlack : #000;
+    --mGrey : #888;
+}
 
 .App{
-    background-color: black;
+    background-color: var(--mWhite);
     display: flex;
     color: white !important;
     
@@ -28,7 +33,7 @@ h1{
 }
 
 body{
-    background-color: black !important;
+    background-color: var(--mWhite) !important;
     
 }
 
