@@ -13,9 +13,7 @@ import Contact from './Pages/Contact/Contact';
 
 
 const theme = createMuiTheme({
-  palette: {
-    type: "dark",
-  }
+
 });
 
 fire.init();

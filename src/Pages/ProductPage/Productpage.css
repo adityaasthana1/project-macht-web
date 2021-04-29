@@ -16,19 +16,19 @@
     display: flex;
     flex-direction: column;
 
-    color: white;
+    color: var(--mBlack);
 }
 
 .ProdCont{
 
     margin-top: 25px;
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     position: relative;
 
     align-self: center;
-    background-color: #111;
+    background-color: var(--mWhite);
     border-radius: 15px;
 
     padding-top: 15px;
@@ -60,12 +60,47 @@
 
 .ProdInfo{
     margin: 15px 45px;
-    display: flex;
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+    gap: 45px;
+    
 }
+
+
 
 .ProdMainInfo{
     width: 40%;
 
+}
+
+.ProdData{
+    padding: 0px 10px;
+    color: var(--mGrey);
+    font-size: 1.8rem;
+}
+
+.ProdButton{
+    width: 100px;
+    height: 50px;
+    background-color: var(--mAccent);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--mWhite);
+    font-size: 1.6rem;
+
+    border-radius: 4px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.ProdBuyCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 45px 0;
 }
 
 
@@ -117,20 +152,6 @@
     cursor: pointer;
 }
 
-@media(max-width:1500px){
-    
-    .ProdCont{
-        width: 75%;
-    }
-}
-
-
-@media(max-width:950px){
-    
-    .ProdCont{
-        width: 85%;
-    }
-}
 
 
 @media(max-width:768px){

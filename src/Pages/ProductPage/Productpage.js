@@ -8,8 +8,8 @@ import { FiLinkedin, FiArrowLeft } from "react-icons/fi";
 
 import Slide from 'react-reveal/Fade';
 import FooterPage from "../../Components/Footer/Footer2";
+import ImageSlider from "../../Components/ImageSlider";
 
-import Page from 'react-page-loading';
 
 
 
@@ -31,19 +31,21 @@ let Productpage = (props) => {
             </div>
         }
         else {
+            // console.log(product.img);
 
             return <Slide bottom>
                 <div className="Prodpage">
                     <div className="ProdCont">
+
+                        {/* Head */}
                         <FiArrowLeft className="ProdGoBack" onClick={goBack} ></FiArrowLeft>
                         <div className="Prod-loc">
-
-                            Product / {product.Name}
+                            Product  /  {product.Name}
                         </div>
-
                         <div className="Prodline"></div>
+                        {/* Head End */}
 
-                        <div className="ProdInfo">
+                        {/* <div className="ProdInfo">
                             <div className="ProdHolder">
                                 <img className="ProdImg" src={product.img} alt={product.Name}></img>
                             </div>
@@ -54,10 +56,31 @@ let Productpage = (props) => {
 
                             </div>
 
-
-
                         </div>
                         <div className="ProdDesc">
+                            {product.Data}
+                        </div> */}
+
+
+                        <div className="ProdInfo">
+                            <div className="ProdLeft">
+                                {/* <img className="ProdImg" src={product.img} alt={product.Name}></img> */}
+                                <ImageSlider content={product.img}></ImageSlider>
+
+                            </div>
+
+                            <div className="ProdRight">
+                                <div className="ProdHead">{product.Name}</div>
+                                <div className="ProdData">{product.main}</div>
+                                <div className="ProdBuyCont">
+                                    <div class='ProdButton'>BUY</div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div className="ProdData">
                             {product.Data}
                         </div>
 

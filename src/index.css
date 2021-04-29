@@ -5,6 +5,8 @@
     --mWhite : #fff;
     --mBlack : #000;
     --mGrey : #888;
+    --mAccent: #3f72af;
+    --mShadow : rgba(0 ,0,0,0.1);
 }
 
 .App{

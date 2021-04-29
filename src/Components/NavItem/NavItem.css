@@ -8,6 +8,7 @@
     width: 0%;
     opacity: 0;
     transition: 0.5s all;
+    height: 100%;
 }
 #drp{
     margin-top: 20px;
@@ -17,6 +18,7 @@
 
 .nav-item{
     cursor: pointer;
+    height: 100%;
 }
 
 .NavLinks , .NavLinks:hover , .NavLinks:visited , .NavLinks:active{
