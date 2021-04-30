@@ -5,6 +5,7 @@ import fire from "../../Scripts/Fire";
 import Loader from "../../Components/Loader/Loader";
 import "./Productpage.css";
 import { FiLinkedin, FiArrowLeft } from "react-icons/fi";
+import { IoMdArrowDropright } from "react-icons/io";
 
 import Slide from 'react-reveal/Fade';
 import FooterPage from "../../Components/Footer/Footer2";
@@ -38,35 +39,19 @@ let Productpage = (props) => {
                     <div className="ProdCont">
 
                         {/* Head */}
-                        <FiArrowLeft className="ProdGoBack" onClick={goBack} ></FiArrowLeft>
-                        <div className="Prod-loc">
-                            Product  /  {product.Name}
+                        <div className="ProdHeadBar">
+                            <FiArrowLeft className="ProdGoBack" onClick={goBack} ></FiArrowLeft>
+                            <div className="Prod-loc">
+                                Product  <IoMdArrowDropright></IoMdArrowDropright>  {product.Name}
+                            </div>
                         </div>
                         <div className="Prodline"></div>
                         {/* Head End */}
 
-                        {/* <div className="ProdInfo">
-                            <div className="ProdHolder">
-                                <img className="ProdImg" src={product.img} alt={product.Name}></img>
-                            </div>
-                            <div className="ProdMainInfo">
-                                <div className="ProdHead">{product.Name}</div>
-                                <div className="ProdMain">{product.main}</div>
-                                <div class='button -dark center customButton'>BUY</div>
-
-                            </div>
-
-                        </div>
-                        <div className="ProdDesc">
-                            {product.Data}
-                        </div> */}
-
 
                         <div className="ProdInfo">
                             <div className="ProdLeft">
-                                {/* <img className="ProdImg" src={product.img} alt={product.Name}></img> */}
                                 <ImageSlider content={product.img}></ImageSlider>
-
                             </div>
 
                             <div className="ProdRight">
@@ -75,8 +60,6 @@ let Productpage = (props) => {
                                 <div className="ProdBuyCont">
                                     <div class='ProdButton'>BUY</div>
                                 </div>
-
-
                             </div>
                         </div>
 

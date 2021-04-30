@@ -22,7 +22,7 @@
 .ProdCont{
 
     margin-top: 25px;
-    width: 80%;
+    width: 85%;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -43,9 +43,9 @@
 
 .Prodline{
     height: 1px;
-    width: 80%;
+    width: 90%;
 
-    background-color: #333;
+    background-color: var(--mGrey);
 
     align-self: center;
 
@@ -59,11 +59,11 @@
 
 
 .ProdInfo{
-    margin: 15px 45px;
+    margin: 10px 25px;
     display: grid;
 
     grid-template-columns: 1.5fr 1fr;
-    gap: 45px;
+    gap: 75px;
     
 }
 
@@ -120,16 +120,17 @@
 }
 
 .Prod-loc{
-    display: inline-block;
-    margin-top: 10px;
-
+    display: inline-flex;
     margin-left: 55px;
     font-size: 1.6rem;
+    color : var(--mGrey);
+    align-items: center;
 }
 
 
 .ProdHead {
     font-size: 4.5rem;
+    
 }
 
 
@@ -144,15 +145,21 @@
 
 .ProdGoBack{
     font-size: 2rem;
-    margin-right: 20px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: 15px 0 0 15px;
     cursor: pointer;
 }
 
+.ProdHeadBar{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin: 0 15px;
+}
 
+@media(max-width:1280px){
+    .ProdCont{
+        width: 95%;
+    }
+}
 
 @media(max-width:768px){
     
