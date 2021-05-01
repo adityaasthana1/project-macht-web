@@ -50,7 +50,7 @@
 }
 
 .exlarge{
-    font-weight: 400;
+    font-weight: 600;
     font-size: 64px;
     line-height: 80px;
     letter-spacing: 1.4px;
@@ -60,6 +60,7 @@
 
 .AboutEase{
     font-size: 4rem;
+    font-weight: 600;
     line-height: 1.4;
     color: var(--mBlack);
 }
