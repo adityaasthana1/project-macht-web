@@ -33,7 +33,7 @@ let generateCards = (users) => {
         <div className="profile-page">
 
             <div className="h-profile">
-                <Slide bottom>{cardsRow}</Slide>
+                {cardsRow}
             </div>
 
 
