@@ -1,0 +1,92 @@
+.CustomFooter{
+    width: 100%;
+    background-color: #111;
+    color:  white;
+    /* height: 400px; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-top: 50px;
+}
+
+.FooterLogo{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FooterLogoHolder{
+    display: inline-flex;
+}
+
+.FooterProducts{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.AboutUs{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.FooterUp{
+    display: flex;
+}
+
+.FooterImg{
+    width: 250px;
+}
+
+.FooterDown{
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.FooterSocial{
+    font-size: 3rem;
+    display: flex;
+    padding-right: 50px;
+}
+
+.FooterCopyright{
+    text-align: center;
+    color:#444
+}
+
+.toLeft{
+    margin-left: auto;
+}
+
+.CustomFooter a{
+    color: #444;
+}
+
+.CustomFooter a:hover{
+    color: #ddd;
+}
+
+
+@media (max-width:720px) {
+    .CustomFooter{
+        /* background-color: rebeccapurple; */
+    }
+
+    .FooterUp{
+        flex-direction: column;
+    }
+
+    .FooterProducts{
+        padding-left: 50px;
+        margin-bottom: 20px;
+    }
+
+    .AboutUs{
+        padding-left: 50px;
+        margin-bottom: 20px;
+    }
+}

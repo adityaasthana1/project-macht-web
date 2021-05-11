@@ -10,6 +10,7 @@ import Carousel from '../../Components/carousel/index';
 import FooterPage from '../../Components/Footer/Footer2';
 import Page from 'react-page-loading'
 import Fade from 'react-reveal/Fade';
+import CustomFooter from '../../Components/Footer/CustomFooter';
 
 
 // import Car from '../../Components/Slider';
@@ -33,7 +34,8 @@ const Home = () => {
           <Carousel />
         </div>
 
-        <FooterPage />
+        {/* <FooterPage /> */}
+        <CustomFooter></CustomFooter>
 
       </div>
     </Page>

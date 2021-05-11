@@ -6,6 +6,7 @@ import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput } from 'mdbreac
 import FormsPage from './FormsPage.js';
 import FooterPage from '../Footer/Footer2.js';
 import SimpleMap from '../Maps/Maps.js';
+import CustomFooter from '../Footer/CustomFooter.js';
 
 const ContactPage = () => {
     return (
@@ -47,7 +48,8 @@ const ContactPage = () => {
 
 
             <FormsPage />
-            <FooterPage />
+            {/* <FooterPage /> */}
+            <CustomFooter></CustomFooter>
         </div>
 
     );

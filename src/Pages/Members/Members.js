@@ -13,6 +13,7 @@ import { FiGithub } from "react-icons/fi";
 import SkillCard from "../../Components/SkillCard/SkillCard";
 import plexus from '../../Img/plexus.jpg'
 import { Link } from "react-router-dom";
+import CustomFooter from "../../Components/Footer/CustomFooter";
 
 
 
@@ -111,7 +112,8 @@ let Members = (props) => {
                 </div>
             </ div>
         </Slide>
-        <FooterPage></FooterPage>
+        {/* <FooterPage></FooterPage> */}
+        <CustomFooter></CustomFooter>
     </div >
 }
 

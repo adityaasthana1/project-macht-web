@@ -10,6 +10,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import Slide from 'react-reveal/Fade';
 import FooterPage from "../../Components/Footer/Footer2";
 import ImageSlider from "../../Components/ImageSlider";
+import CustomFooter from "../../Components/Footer/CustomFooter";
 
 
 
@@ -72,7 +73,8 @@ let Productpage = (props) => {
                     </div>
                 </ div>
 
-                <FooterPage></FooterPage>
+                {/* <FooterPage></FooterPage> */}
+                <CustomFooter></CustomFooter>
             </Slide>
         }
     }

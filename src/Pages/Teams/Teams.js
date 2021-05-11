@@ -10,6 +10,7 @@ import Loader from "../../Components/Loader/Loader";
 
 import Slide from 'react-reveal/Fade';
 import FooterPage from "../../Components/Footer/Footer2";
+import CustomFooter from "../../Components/Footer/CustomFooter";
 
 let generateCards = (users) => {
     console.log("user", users);
@@ -38,7 +39,8 @@ let generateCards = (users) => {
 
 
         </div>
-        <FooterPage></FooterPage>
+        {/* <FooterPage></FooterPage> */}
+        <CustomFooter></CustomFooter>
     </div>
 }
 
