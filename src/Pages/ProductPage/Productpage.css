@@ -178,6 +178,10 @@
     margin: 0 15px;
 }
 
+.ProdRatioBox{
+    height: 200px;
+}
+
 @media(max-width:1280px){
     .ProdCont{
         width: 95%;

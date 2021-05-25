@@ -104,7 +104,30 @@ button:hover {
 
 .slider-content {
   text-align: center;
+  width: 100%;
 
+  display: flex;
+  align-items: center;
+}
+
+.slider-image{
+  width: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-image-cont{
+  width: 100%;
+  /* padding-top: 57.255%; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider-content .inner {
@@ -180,26 +203,17 @@ button:hover {
   z-index: 3;
 }
 
-@media (max-height: 500px) {
-  .slider-wrapper, .slide {
-    height: calc(100vh - 75px);
-  }    
-}
 
 @media (max-width: 640px) {
-  .slider-wrapper, .slide {
-    height: calc(80vh - 75px);
-  }    
-}
-
-@media (max-height: 600px) {
-  .slider-content .inner h1 {
-    font-size: 32px;
-  }    
-}
-
-@media (max-width: 640px) {
-  .slider-content .inner h1 {
-    font-size: 32px;
+  .slider-wrapper {
+    
+    height: 40vh;
+    
+  }
+  
+  .slide {
+    height: 40vh;
+   
   }
 }
+

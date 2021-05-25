@@ -3,17 +3,17 @@ import Navbar from "../../Components/Navbar/Navbar"
 import Profile from "../../Components/Profile/Profile"
 import "./Teams.css"
 // import logo from "../../Img/temp.jpg"
-import profileData from "../../Data/Profiles"
+// import profileData from "../../Data/Profiles"
 import fire from "../../Scripts/Fire"
-import { CircularProgress } from "@material-ui/core";
+// import { CircularProgress } from "@material-ui/core";
 import Loader from "../../Components/Loader/Loader";
 
-import Slide from 'react-reveal/Fade';
-import FooterPage from "../../Components/Footer/Footer2";
+// import Slide from 'react-reveal/Fade';
+// import FooterPage from "../../Components/Footer/Footer2";
 import CustomFooter from "../../Components/Footer/CustomFooter";
 
 let generateCards = (users) => {
-    console.log("user", users);
+    // console.log("user", users);
     if (!users) {
         return <Loader></Loader>
     }
@@ -23,10 +23,30 @@ let generateCards = (users) => {
 
 
     for (let data in users) {
-        cardsRow.push(<Profile id={users[data].id} name={users[data].name} desc={users[data].desc} img={users[data].img} key={counter}></Profile>);
+        cardsRow.push(<Profile key={users.id} {...users[data]}></Profile>);
         counter++;
     }
 
+    console.log("before", cardsRow);
+    cardsRow.sort((x, y) => {
+        // console.log("sort", x.props.order, y.props.order)
+        if (x.props.order && y.props.order) {
+            if (x.props.order > y.props.order) {
+                return 1;
+            } else {
+                return -1;
+            }
+        }
+        if (x.props.order && !y.props.order) {
+            return -1;
+        }
+        if (!x.props.order && y.props.order) {
+            return 1;
+        }
+
+        return 0;
+    });
+    console.log("after", cardsRow);
 
     return <div>
         <div className="team-header">Meet The Team</div>

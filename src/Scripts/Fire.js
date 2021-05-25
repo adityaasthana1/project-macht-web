@@ -34,7 +34,7 @@ let fire = (() => {
             // console.log(data, "inner");
 
         })
-        console.log(data, "outer");
+        // console.log(data, "outer");
         return data;
     }
 

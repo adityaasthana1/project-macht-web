@@ -6,7 +6,7 @@ import PnD from "../../Components/PnD/PnD";
 import VnF from '../../Components/VnF/VnF';
 // import Footer from "../../Components/Footer/Footer";
 import "./home.css";
-import Carousel from '../../Components/carousel/index';
+// import Carousel from '../../Components/carousel/index';
 import FooterPage from '../../Components/Footer/Footer2';
 import Page from 'react-page-loading'
 import Fade from 'react-reveal/Fade';
@@ -27,11 +27,11 @@ const Home = () => {
 
         <div className="Home">
           <Navbar></Navbar>
-          <Welcome></Welcome>
+          {/* <Welcome></Welcome> */}
           <About />
           <PnD></PnD>
-          <VnF></VnF>
-          <Carousel />
+          {/* <VnF></VnF> */}
+          {/* <Carousel /> */}
         </div>
 
         {/* <FooterPage /> */}

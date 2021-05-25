@@ -1,6 +1,9 @@
+import { GitHub } from "@material-ui/icons";
 import React from "react";
 import { useHistory } from "react-router";
 import "./profile.css";
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai"
+import { Link } from "react-router-dom";
 
 let Profile = (props) => {
     let history = useHistory();
@@ -23,13 +26,18 @@ let Profile = (props) => {
     //     </figcaption>
     // </figure>
 
-    console.log("data", props)
+    // console.log("data", props)
+    // console.log("asdfadsf", pr / ops);
     return <div className="ProfileCont">
         <img className="ProfilePic" src={props.img} alt="profile-pic"></img>
         <h3 className="ProfileName">{props.name}</h3>
         <p className="ProfileDesc">{props.desc}</p>
-        <div className="ProfileViewProfile" onClick={() => { history.push(`/members/${props.id}`) }}>ViewProfile</div>
-    </div>
+        <div className="SocialIcons">
+            {props.git ? <a href={props.git}><AiFillGithub className="iconsHover" /></a> : null}
+            {props.insta ? <a href={props.insta}><AiFillInstagram className="iconsHover" /></a> : null}
+            {props.linked ? <a href={props.linked}><AiFillLinkedin className="iconsHover" /> </a> : null}
+        </div >
+    </div >
 
 }
 

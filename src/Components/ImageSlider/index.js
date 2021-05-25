@@ -25,9 +25,13 @@ let carouselGen = (props) => {
     x.push(<div
       key={key}
       className="slider-content"
-      style={{ background: `url('${props.content[key]}') no-repeat center center` }}
+    // style={{ background: `url('${props.content[key]}') no-repeat center center` }}
     >
+      <div className="slider-image-cont">
 
+        <img style={{ width: "100%" }} src={`${props.content[key]}`}></img>
+
+      </div>
     </div>)
   }
 
@@ -38,7 +42,7 @@ let carouselGen = (props) => {
 const ImageSlider = (props) => {
 
   let history = useHistory();
-  return <Slider className="slider-wrapper" autoplay={30000}  >
+  return <Slider className="slider-wrapper" infinite={true} autoplay={3000} touchDisabled={true}>
     {carouselGen(props)}
   </Slider>
 

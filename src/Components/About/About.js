@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../Button/Button";
 import "./About.css";
 import about from "../../Img/AboutA.jpg"
-import neural from "../../Img/neural.png"
+import neural from "../../Img/projectmacht.png"
 
 import Fade from 'react-reveal/Fade';
 
@@ -15,7 +15,7 @@ let About = () => {
 
         <div className="sec">
 
-            <Fade left>
+            <Fade >
                 <div className="aboutInfo">
                     <h1 className="exlarge">Who are we?</h1>
                     <p className="aboutInfo">An initiative to build a highly customizable AI-based smart assistant
@@ -25,7 +25,7 @@ let About = () => {
 
                 </div>
             </Fade>
-            <Fade right>
+            <Fade >
                 <div>
                     <img src={neural} className="image" alt="neural"></img>
                 </div>

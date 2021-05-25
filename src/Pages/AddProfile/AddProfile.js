@@ -4,7 +4,7 @@ import fire from "../../Scripts/Fire";
 import Profile from "../../Components/Profile/Profile";
 import calcId from "../../Scripts/calcId";
 import "./addprofile.css";
-import { Slide } from "@material-ui/core";
+import { Button, Slide } from "@material-ui/core";
 
 let AddProfile = () => {
 
@@ -17,6 +17,7 @@ let AddProfile = () => {
     let [linked, setLinked] = useState("");
     let [insta, setInsta] = useState("");
     let [Git, setGit] = useState("");
+    let [succ, setSucc] = useState("notUploaded");
 
     let nameSetter = (e) => {
         setName(e.target.value);
@@ -63,27 +64,32 @@ let AddProfile = () => {
             let img = await fire.uploadImage(image, name);
 
             e[name] = {
+                order: null,
                 name: name,
                 desc: desc,
                 img: img,
-                id: name.toLowerCase()
-            };
-
-            let Member = {
-                name: name,
-                desc: desc,
-                img: img,
-                id: (name.toLowerCase()),
-                role: role,
-                info: info,
-                skills: skills,
+                id: name.toLowerCase(),
                 git: Git,
                 insta: insta,
                 linked: linked
-            }
+            };
+
+            // let Member = {
+            //     name: name,
+            //     desc: desc,
+            //     img: img,
+            //     id: (name.toLowerCase()),
+            //     role: role,
+            //     info: info,
+            //     skills: skills,
+            //     git: Git,
+            //     insta: insta,
+            //     linked: linked
+            // }
 
             await fire.upload(e);
-            await fire.uploadMember(Member);
+            // await fire.uploadMember(Member);
+            setSucc("uploaded")
         });
     }
 
@@ -100,7 +106,7 @@ let AddProfile = () => {
                     <textarea type="text" onChange={descSetter} value={desc}></textarea>
                 </div>
 
-                <div>
+                {/* <div>
                     <label>Role</label>
                     <input type="text" onChange={descRole} value={role}></input>
                 </div>
@@ -113,7 +119,7 @@ let AddProfile = () => {
                 <div>
                     <label>Skills</label>
                     <textarea type="text" onChange={descSkills} value={skills}></textarea>
-                </div>
+                </div> */}
 
 
 
@@ -139,8 +145,11 @@ let AddProfile = () => {
                     <input type="text" onChange={gitSetter} value={Git}></input>
                 </div>
 
+                <h3 style={{ color: 'black' }}>{succ}</h3>
+
                 <div>
-                    <input type="button" value="Upload" onClick={submitData}></input>
+                    {/* <input type="button" value="Upload" className="btn btn-primary" onClick={submitData}></input> */}
+                    <Button variant='contained' color='primary' onClick={submitData}>Upload</Button>
                 </div>
             </div>
         </form>

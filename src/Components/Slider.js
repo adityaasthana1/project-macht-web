@@ -5,7 +5,7 @@ const Car = () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
   return (
-   
+
     <div style={{ padding: `0 ${chevronWidth}px` }}>
       <ItemsCarousel
         requestToChangeActive={setActiveItemIndex}
@@ -17,7 +17,7 @@ const Car = () => {
         outsideChevron
         chevronWidth={chevronWidth}
       >
-         
+
         <div style={{ height: 200, background: '#EEE' }}>First card</div>
         <div style={{ height: 200, background: '#EEE' }}>Second card</div>
         <div style={{ height: 200, background: '#EEE' }}>Third card</div>

@@ -11,7 +11,7 @@ import CustomFooter from '../Footer/CustomFooter.js';
 const ContactPage = () => {
     return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="ContactHeaderImg">
                 <img src="https://firebasestorage.googleapis.com/v0/b/ledautomation-1f46e.appspot.com/o/Carousel%2FofficeCar.jpg?alt=media&token=4391bb71-f32f-42ee-b9b6-d8f51566209b" />
             </div>

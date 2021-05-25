@@ -9,12 +9,16 @@ import { useHistory } from "react-router";
 import Productpage from "../../Pages/ProductPage/Productpage";
 import { propTypes } from "react-bootstrap/esm/Image";
 import Drawer from '@material-ui/core/Drawer';
-import { Divider, List, ListItem, ListItemText } from "@material-ui/core";
+import { Collapse, Divider, List, ListItem, ListItemText, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { ExpandLess, ExpandMore, Home } from "@material-ui/icons";
+// import { Collapse } from "bootstrap";
 
 //Header Component
 let Header = (props) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [open, setOpen] = useState(false);
+
   let history = useHistory();
   let anchor = "button";
   let upd = (val) => {
@@ -28,7 +32,7 @@ let Header = (props) => {
 
   let setDrawer = () => {
     setRenderDrawer(!renderDrawer);
-    console.log(renderDrawer);
+    // console.log(renderDrawer);
   }
 
   const handleClose = (prod) => {
@@ -91,45 +95,74 @@ let Header = (props) => {
         <div class="navbar-header">
 
 
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" onClick={() => { setDrawer() }}>
+          <button type="button" class="navbar-toggle" onClick={() => { setDrawer() }}>
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
 
-          <Drawer anchor="top" open={renderDrawer} onClose={() => { setRenderDrawer(false) }}>
-            <div
-              tabIndex={0}
-              role="button"
-              onClick={() => { setRenderDrawer(false) }}
-              onKeyDown={() => { setRenderDrawer(false) }}
-            >
-              <List component="nav" aria-label="main mailbox folders">
-                <ListItem height="50%" >
-                  <ListItemText primary="Project Macht" />
-                </ListItem>
-                <ListItem button onClick={() => { history.push("/") }}>
-                  <ListItemText primary="Home" />
-                </ListItem>
-                <ListItem button onClick={openMenu}>
-                  <ListItemText primary="Product" />
-                </ListItem>
-                <ListItem button onClick={() => { history.push("/teams") }}>
-                  <ListItemText primary="Team" />
-                </ListItem>
-                <ListItem button onClick={() => { history.push("/contactus") }} >
-                  <ListItemText primary="Contact us" />
-                </ListItem>
-              </List>
-            </div>
+          <Drawer anchor="top" open={renderDrawer} onClose={() => { setRenderDrawer(false) }} >
+            <List >
+              <ListItem>
+                <Typography variant='h4' color='textSecondary'>Project Macht</Typography>
+              </ListItem>
+
+              <ListItem button onClick={() => history.push('/')}>
+                <Typography variant='h5' >Home</Typography>
+              </ListItem>
+
+              <Divider variant="middle" />
+
+              <ListItem button onClick={() => setOpen(!open)}>
+                <Typography variant='h5' >Product </Typography>
+                {open ? <ExpandLess></ExpandLess> : <ExpandMore></ExpandMore>}
+              </ListItem>
+
+              <Collapse in={open} timeout="auto" unmountOnExit>
+                <List component="div" disablePadding style={{ paddingLeft: "10px" }}>
+
+                  <Divider variant='middle'></Divider>
+
+                  <ListItem button onClick={() => { handleClose(0) }}>
+                    <Typography variant="h6" align='center'>Amanda</Typography>
+                  </ListItem>
+
+                  <Divider variant='middle'></Divider>
+
+                  <ListItem button onClick={() => { handleClose(1) }}>
+                    <Typography variant="h6" align='center'>Wally</Typography>
+                  </ListItem>
+
+                  <Divider variant='middle'></Divider>
+
+                  <ListItem button onClick={() => { handleClose(2) }}>
+                    <Typography variant="h6" align='center'>Computer Vision</Typography>
+                  </ListItem>
+
+                </List>
+              </Collapse>
+
+              <Divider variant="middle" />
+
+              <ListItem button onClick={() => history.push('/teams')} >
+                <Typography variant='h5' > Team</Typography>
+              </ListItem>
+
+              <Divider variant="middle" />
+
+              <ListItem button onClick={() => history.push('/contactus')}>
+                <Typography variant='h5' >Contact Us</Typography>
+              </ListItem>
+
+            </List>
           </Drawer>
 
           <a class="navbar-brand" href="#">Project Macht</a>
         </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
+        <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav " style={{ marginLeft: "auto" }}>
             <NavItem data={"Home"} to={"/"}></NavItem>
             <NavItem data={"Product"} onClick={openMenu}></NavItem>
             {/* <Dropdown text='Product' id="drp" options={options} error /> */}
